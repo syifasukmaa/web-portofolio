@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Poppins:wght@300;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-primary {
+  @apply bg-gradient-to-t from-blue to-purple;
+}
+.gradient-secondary {
+  @apply bg-gradient-to-r from-blue to-purple;
+}

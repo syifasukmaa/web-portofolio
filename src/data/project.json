@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "First Website",
+    "desc": "Website Pertama yang dibuat dengan rapih dan dikoreksi oleh dicoding academy sebagai tugas akhir dasar pemrograman web",
+    "github": "https://github.com/syifasukmaa/JKT48_Dicoding",
+    "preview": "https://jkt48-dicoding.netlify.app/",
+    "stack": "HTML, CSS, JavaScript",
+    "imgUrl": "/img/firstproject.png"
+  },
+  {
+    "id": 2,
+    "name": "ShanDay Apps",
+    "desc": "ShanDay merupakan project akhir dari dicoding academy untuk membuat rekomendasi restaurant menggunakan API Dicoding.",
+    "github": "https://github.com/syifasukmaa/ShanDay-Apps",
+    "preview": "https://shanday.netlify.app/",
+    "stack": " SASS, nodeJS, webpack",
+    "imgUrl": "/img/shanday.png"
+  },
+  {
+    "id": 3,
+    "name": "Savedueet Apps",
+    "desc": "Savedueet merupakan website yang berguna untuk mencatat pemasukan dan pengeluaran keuangan yang dibuat dengan react js",
+    "github": "https://github.com/syifasukmaa/savedueet",
+    "preview": "https://savedueet.vercel.app/",
+    "stack": "React JS, Bootstrap",
+    "imgUrl": "/img/savedueet.png"
+  },
+  {
+    "id": 4,
+    "name": "Personal Notes",
+    "desc": "Personal notes merupakan website untuk mencatat kegiatan sehari hari yang dibuat dengan react js",
+    "github": "https://github.com/syifasukmaa/personal-note",
+    "preview": "https://notes-shanday.netlify.app/",
+    "stack": "React JS, TailwindCSS",
+    "imgUrl": "/img/notes.png"
+  }
+]
