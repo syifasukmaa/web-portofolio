@@ -1,7 +1,7 @@
 import { BsLink45Deg, BsGithub } from 'react-icons/bs';
 import CardItemBody from './CardItemBody';
 import PrevButton from './PrevButton';
-import CodeButton from './codeButton';
+import CodeButton from './CodeButton';
 
 const CardItem = ({ project }) => {
   return (
