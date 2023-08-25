@@ -18,7 +18,7 @@ function About() {
           <h3 className="text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 ">
             About Me
           </h3>
-          <p className="pt-2 font-light text-greys dark:text-ygPurple  md:text-xl">
+          <p className="pt-2 font-light text-greys dark:text-ygPurple md:text-xl">
             Get to know me
           </p>
         </div>

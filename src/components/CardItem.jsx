@@ -2,11 +2,22 @@ import { BsLink45Deg, BsGithub } from 'react-icons/bs';
 import CardItemBody from './CardItemBody';
 import PrevButton from './PrevButton';
 import CodeButton from './CodeButton';
+import { motion } from 'framer-motion';
 
 const CardItem = ({ project }) => {
   return (
     <>
-      <div className="w-full transition-all duration-500 ease-in-out bg-white dark:bg-dark200 rounded-lg drop-shadow-lg hover:scale-110">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, amount: 0.5 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className="w-full transition-all duration-500 ease-in-out bg-white dark:bg-dark200 rounded-lg drop-shadow-lg hover:scale-110"
+      >
         <div className="w-full overflow-hidden rounded-t-lg img">
           <img
             src={project.imgUrl}
@@ -33,7 +44,7 @@ const CardItem = ({ project }) => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

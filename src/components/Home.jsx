@@ -6,7 +6,17 @@ function Home() {
   return (
     <section id="home" className="w-[90%] mx-auto lg:w-[75%]">
       <div className="flex flex-col items-center justify-between pt-32 mx-auto text-center md:text-left lg:items-center pb-14 md:pt-36 lg:pt-48 md:flex-row font-poppins">
-        <div className="mb-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, amount: 0.5 }}
+          variants={{
+            visible: { x: '0' },
+            hidden: { x: '-200px' },
+          }}
+          className="mb-6"
+        >
           <div className="text-2xl font-bold font-poppins xl:text-4xl md:text-3xl ">
             <p className="mb-2 text-ygPurple dark:text-primary100">Hi👋</p>
             <p className="mb-2 text-ygPurple dark:text-primary100">
@@ -37,7 +47,7 @@ function Home() {
               )
             }
           />
-        </div>
+        </motion.div>
         <motion.div
           initial="hidden"
           whileInView="visible"
