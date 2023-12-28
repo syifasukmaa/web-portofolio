@@ -16,7 +16,7 @@ const CardItem = ({ project }) => {
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
         }}
-        className="w-full transition-all duration-500 ease-in-out bg-white dark:bg-dark200 rounded-lg drop-shadow-lg hover:scale-110"
+        className="w-full transition-all duration-500 ease-in-out bg-white rounded-lg dark:bg-dark200 drop-shadow-lg hover:scale-110"
       >
         <div className="w-full overflow-hidden rounded-t-lg img">
           <img
@@ -27,6 +27,13 @@ const CardItem = ({ project }) => {
         </div>
 
         <div className="p-5 ">
+          <div
+            className={`px-2 mb-1 border-[2.5px] ${
+              project.process === 'Done' ? 'border-green-500 ' : 'border-red-600'
+            } rounded-xl w-fit dark:text-dark700`}
+          >
+            {project.process}
+          </div>
           <CardItemBody
             title={project.name}
             desc={project.desc}

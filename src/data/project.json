@@ -6,7 +6,8 @@
     "github": "https://github.com/syifasukmaa/JKT48_Dicoding",
     "preview": "https://jkt48-dicoding.netlify.app/",
     "stack": "HTML, CSS, JavaScript",
-    "imgUrl": "/img/firstproject.png"
+    "imgUrl": "/img/firstproject.png",
+    "process": "Done"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "github": "https://github.com/syifasukmaa/ShanDay-Apps",
     "preview": "https://shanday.netlify.app/",
     "stack": " SASS, nodeJS, webpack",
-    "imgUrl": "/img/shanday.png"
+    "imgUrl": "/img/shanday.png",
+    "process": "Done"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "github": "https://github.com/syifasukmaa/savedueet",
     "preview": "https://savedueet.vercel.app/",
     "stack": "React JS, Bootstrap",
-    "imgUrl": "/img/savedueet.png"
+    "imgUrl": "/img/savedueet.png",
+    "process": "Done"
   },
   {
     "id": 4,
@@ -33,6 +36,17 @@
     "github": "https://github.com/syifasukmaa/personal-note",
     "preview": "https://notes-shanday.netlify.app/",
     "stack": "React JS, TailwindCSS",
-    "imgUrl": "/img/notes.png"
+    "imgUrl": "/img/notes.png",
+    "process": "Done"
+  },
+  {
+    "id": 5,
+    "name": "Preducation",
+    "desc": "Preducation merupakan website berbagai kursus mengenai teknologi digital seperti Android Development dan lain-lain",
+    "github": "https://github.com/LMS-Binar-C6",
+    "preview": "https://preducation-dashboard.up.railway.app/",
+    "stack": "Next JS, TailwindCSS",
+    "imgUrl": "/img/preducation.png",
+    "process": "On Progress"
   }
 ]
