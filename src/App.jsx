@@ -1,16 +1,31 @@
-import './App.css';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Project from './components/Project';
-import Stack from './components/Stack';
+import { useEffect, useState } from 'react';
+import Home from './components/organisms/Home';
+import About from './components/organisms/About';
+import Contact from './components/organisms/Contact';
+import Footer from './components/organisms/Footer';
+import Navbar from './components/organisms/Navbar';
+import Project from './components/organisms/Project';
+import Stack from './components/organisms/Stack';
+import { Link } from 'react-scroll';
 
 function App() {
+  const [colorChange, setColorChange] = useState(true);
+
+  const handleToTop = (e) => {
+    e.preventDefault();
+    if (window.scrollY <= 50) {
+      setColorChange(true);
+    } else {
+      setColorChange(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleToTop);
+  }, [colorChange]);
   return (
     <>
-      <div className="w-full dark:bg-dark100">
+      <div className='relative w-full dark:bg-dark100'>
         <Navbar />
         <Home />
         <About />
@@ -18,6 +33,20 @@ function App() {
         <Project />
         <Contact />
         <Footer />
+        <Link
+          to='home'
+          spy={true}
+          smooth={true}
+          className={`${
+            colorChange ? 'hidden' : 'flex'
+          } fixed w-[10%] md:w-[6%] lg:w-[4%] p-3 cursor-pointer border-2 border-transparent hover:bg-white  dark:hover:bg-dark700 hover:border-blue mx-auto bottom-14 right-10 rounded-full bg-blue`}
+          onClick={handleToTop}
+        >
+          <img
+            src='./img/up.svg'
+            className='w-[100%]'
+          />
+        </Link>
       </div>
     </>
   );

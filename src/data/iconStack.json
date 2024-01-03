@@ -2,46 +2,55 @@
   {
     "id": 1,
     "img": "/img/stack/html.svg",
-    "alt": "image html"
+    "alt": "image html",
+    "text": "HTML"
   },
   {
     "id": 2,
     "img": "/img/stack/css.svg",
-    "alt": "image css"
+    "alt": "image css",
+    "text": "CSS"
   },
   {
     "id": 3,
     "img": "/img/stack/js.svg",
-    "alt": "image JS"
+    "alt": "image JS",
+    "text": "JavaScript"
   },
   {
     "id": 4,
     "img": "/img/stack/sass.svg",
-    "alt": "image SASS"
+    "alt": "image SASS",
+    "text": "SASS"
   },
   {
     "id": 5,
     "img": "/img/stack/tailwind.svg",
-    "alt": "image tailwind"
+    "alt": "image tailwind",
+    "text": "Tailwindcss"
   },
   {
     "id": 6,
     "img": "/img/stack/bootstrap.svg",
-    "alt": "image bootstrap"
+    "alt": "image bootstrap",
+    "text": "Bootstrap"
   },
   {
     "id": 7,
-    "img": "/img/stack/git.svg",
-    "alt": "image git"
+    "img": "/img/stack/react.svg",
+    "alt": "image react",
+    "text": "React"
   },
   {
     "id": 8,
-    "img": "/img/stack/github.svg",
-    "alt": "image github"
+    "img": "/img/stack/next js.svg",
+    "alt": "Next JS",
+    "text": "Next JS"
   },
   {
     "id": 9,
-    "img": "/img/stack/react.svg",
-    "alt": "image react"
+    "img": "/img/stack/nodejs.svg",
+    "alt": "Node JS",
+    "text": "Node JS"
   }
 ]

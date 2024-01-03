@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "/img/stack/vscode.svg",
+    "alt": "image vscode",
+    "text": "Vscode"
+  },
+  {
+    "id": 2,
+    "img": "/img/stack/git.svg",
+    "alt": "image git",
+    "text": "GIT"
+  },
+  {
+    "id": 3,
+    "img": "/img/stack/github.svg",
+    "alt": "image github",
+    "text": "Github"
+  },
+  {
+    "id": 4,
+    "img": "/img/stack/figma.svg",
+    "alt": "image figma",
+    "text": "Figma"
+  }
+]

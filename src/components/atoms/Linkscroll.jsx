@@ -4,7 +4,7 @@ const LinkScroll = (props) => {
   const { title, styling } = props;
   return (
     <Link
-      activeClass="active"
+      activeClass='active'
       smooth={true}
       spy={true}
       to={title}

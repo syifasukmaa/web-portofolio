@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-function Button({ title, styling, click }) {
+
+function Button({ styling, click, children }) {
   return (
     <motion.button
-      className={styling}
+      className={`${styling}`}
       onClick={click}
       whileHover={{ scale: 0.8 }}
     >
-      {title}
+      {children}
     </motion.button>
   );
 }
