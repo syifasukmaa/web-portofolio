@@ -5,7 +5,7 @@ function Button({ styling, click, children }) {
     <motion.button
       className={`${styling}`}
       onClick={click}
-      whileHover={{ scale: 0.8 }}
+      whileHover={{ scale: 0.9 }}
     >
       {children}
     </motion.button>
