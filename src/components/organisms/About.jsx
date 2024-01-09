@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import Button from '../atoms/Button';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 function About() {
   return (
@@ -40,6 +42,27 @@ function About() {
               skills and leadership that allow me to effectively solve all kinds of problems. I have a great interest in
               the IT industry, especially in the fields of web development.
             </p>
+            <div className='flex mt-2'>
+              <Button
+                styling={
+                  'rounded-md mt-4 flex py-1 px-4 cursor-pointer text-lg items-center transition-all ease-in-out lg:mx-0 lg:mr-0 font-dmsans text-dark100 dark:text-dark300 dark:bg-darkBlue bg-blue border-2 border-darkBlue dark:border-blue'
+                }
+                click={() => window.open('https://github.com/syifasukmaa', '_blank')}
+              >
+                <BsGithub className='dark:hover:text-light500' />
+                <p className='ml-2'>Github</p>
+              </Button>
+
+              <Button
+                styling={
+                  'rounded-md mt-4 flex py-1 px-4 cursor-pointer text-lg items-center transition-all ease-in-out lg:mr-0 font-dmsans text-dark100 dark:text-dark300 dark:bg-darkBlue bg-blue border-2 border-darkBlue dark:border-blue ml-2'
+                }
+                click={() => window.open('https://www.linkedin.com/in/syifasukma/', '_blank')}
+              >
+                <BsLinkedin className='bg-transparent rounded-full hover:text-blue dark:hover:text-light500' />
+                <p className='ml-2'>LinkedIn</p>
+              </Button>
+            </div>
           </div>
         </div>
       </motion.div>

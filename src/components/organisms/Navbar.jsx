@@ -1,4 +1,4 @@
-import { BsXLg, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsXLg } from 'react-icons/bs';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { useEffect, useState } from 'react';
 import Button from '../atoms/Button';
@@ -55,7 +55,7 @@ const Navbar = () => {
           </Button>
         )}
         <div className={isNavOpen ? 'absolute w-full right-0 top-20 max-w-[250px]' : 'hidden lg:flex'}>
-          <nav className='flex flex-col justify-center bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-dark300 dark:border-dark600 lg:dark:bg-transparent lg:items-center lg:border-none lg:bg-transparent lg:shadow-none lg:flex-row '>
+          <nav className='flex flex-col justify-center py-3 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-dark300 dark:border-dark600 lg:dark:bg-transparent lg:items-center lg:border-none lg:bg-transparent lg:shadow-none lg:flex-row'>
             {linkNav.map((link) => (
               <LinkScroll
                 key={link.id}
@@ -64,23 +64,6 @@ const Navbar = () => {
               />
             ))}
 
-            <Button
-              styling={
-                'rounded-full flex py-2 mx-8 md:mx-4 cursor-pointer text-lg hover:font-bold hover:text-blue transition-all ease-in-out lg:mx-0 lg:ml-5 lg:mr-0 font-dmsans text-greys dark:text-dark600'
-              }
-              click={() => window.open('https://github.com/syifasukmaa', '_blank')}
-            >
-              <BsGithub className='dark:hover:text-light500' />
-            </Button>
-
-            <Button
-              styling={
-                'flex py-2 md:mx-4 cursor-pointer text-lg mx-8 lg:mx-0 hover:font-bold lg:ml-1 lg:mr-0 text-greys dark:text-dark600'
-              }
-              click={() => window.open('https://www.linkedin.com/in/syifasukma/', '_blank')}
-            >
-              <BsLinkedin className='bg-transparent rounded-full lg:ml-5 hover:text-blue dark:hover:text-light500' />
-            </Button>
             <ToggleSwitch />
           </nav>
         </div>

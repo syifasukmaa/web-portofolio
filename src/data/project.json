@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Personal Notes",
-    "desc": "Personal notes merupakan website untuk mencatat kegiatan sehari hari yang dibuat dengan react js",
+    "desc": "Personal notes merupakan website untuk mencatat kegiatan sehari hari yang dibuat dengan react js yang disimpan di localstorage",
     "github": "https://github.com/syifasukmaa/personal-note",
     "preview": "https://notes-shanday.netlify.app/",
     "stack": "React JS, TailwindCSS",
@@ -47,6 +47,6 @@
     "preview": "https://preducation-dashboard.up.railway.app/",
     "stack": "Next JS, TailwindCSS",
     "imgUrl": "/img/preducation.png",
-    "process": "On Progress"
+    "process": "Done"
   }
 ]

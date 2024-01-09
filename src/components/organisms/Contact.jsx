@@ -11,7 +11,7 @@ function Contact() {
   return (
     <section
       id='contact'
-      className='w-full pb-44 md:pt-18 font-poppins'
+      className='w-full py-44 md:pt-18 font-poppins'
     >
       <motion.div
         initial='hidden'
