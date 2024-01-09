@@ -4,6 +4,8 @@ import iconTools from '../../data/iconTools.json';
 import { motion } from 'framer-motion';
 import Button from '../atoms/Button';
 import StackItem from '../molecules/StackItem';
+import { IoSettingsSharp } from 'react-icons/io5';
+import { FaTools } from 'react-icons/fa';
 
 function Stack() {
   const [stack, setStack] = useState(true);
@@ -35,17 +37,21 @@ function Stack() {
             Technologies I’ve been working with recently
           </p>
         </div>
-        <div className='mt-6 text-center text-white'>
+        <div className='flex justify-center mt-6 text-center text-white'>
           <Button
-            styling={`${stack ? 'bg-blue' : 'bg-dark600'} bg-blue py-2 px-4 mr-2 rounded-lg`}
+            styling={`${stack ? 'bg-blue' : 'bg-dark600'} bg-blue py-2 px-4 mr-2 rounded-lg flex items-center`}
             click={handleStack}
           >
+            <IoSettingsSharp className='mr-2 text-xl' />
             Techstack
           </Button>
           <Button
-            styling={`${stack ? 'bg-dark600' : 'bg-blue'} bg-blue py-2 px-4 mr-2 rounded-lg min-w-[110px]`}
+            styling={`${
+              stack ? 'bg-dark600' : 'bg-blue'
+            } bg-blue py-2 px-4 mr-2 rounded-lg min-w-[110px]  flex items-center`}
             click={handleStack}
           >
+            <FaTools className='mr-2 text-xl' />
             Tools
           </Button>
         </div>

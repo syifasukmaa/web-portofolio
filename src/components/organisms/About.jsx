@@ -49,8 +49,8 @@ function About() {
                 }
                 click={() => window.open('https://github.com/syifasukmaa', '_blank')}
               >
-                <BsGithub className='dark:hover:text-light500' />
-                <p className='ml-2'>Github</p>
+                <BsGithub className='dark:hover:text-light500 dark:text-dark700' />
+                <p className='ml-2 font-semibold text-white dark:text-dark700'>Github</p>
               </Button>
 
               <Button
@@ -59,8 +59,8 @@ function About() {
                 }
                 click={() => window.open('https://www.linkedin.com/in/syifasukma/', '_blank')}
               >
-                <BsLinkedin className='bg-transparent rounded-full hover:text-blue dark:hover:text-light500' />
-                <p className='ml-2'>LinkedIn</p>
+                <BsLinkedin className='bg-transparent rounded-full hover:text-blue dark:hover:text-light500 dark:text-dark700' />
+                <p className='ml-2 font-semibold text-white dark:text-dark700'>LinkedIn</p>
               </Button>
             </div>
           </div>
