@@ -9,18 +9,22 @@
   },
   {
     "id": 3,
-    "title": "stack"
+    "title": "resume"
   },
   {
     "id": 4,
-    "title": "project"
+    "title": "stack"
   },
   {
     "id": 5,
-    "title": "certificate"
+    "title": "project"
   },
   {
     "id": 6,
+    "title": "certificate"
+  },
+  {
+    "id": 7,
     "title": "contact"
   }
 ]

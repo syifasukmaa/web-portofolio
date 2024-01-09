@@ -8,6 +8,7 @@ import Project from './components/organisms/Project';
 import Stack from './components/organisms/Stack';
 import { Link } from 'react-scroll';
 import Certification from './components/organisms/Certification';
+import Resume from './components/organisms/Resume';
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -30,6 +31,7 @@ function App() {
         <Navbar />
         <Home />
         <About />
+        <Resume />
         <Stack />
         <Project />
         <Certification />

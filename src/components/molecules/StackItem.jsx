@@ -9,7 +9,7 @@ export default function StackItem({ data }) {
         alt={icon.alt}
         className='self-center w-1/2'
       />
-      <p className='mt-6 dark:text-white'>{icon.text}</p>
+      <p className='mt-6 dark:text-dark700'>{icon.text}</p>
     </div>
   ));
 }

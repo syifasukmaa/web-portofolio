@@ -3,12 +3,14 @@
     "id": 1,
     "image": "./img/sertifikat/webDicodingPemula.png",
     "title": "Dicoding",
-    "desc": "Belajar Membuat Front-End Untuk Pemula"
+    "desc": "Belajar Membuat Front-End Untuk Pemula",
+    "year": 2022
   },
   {
     "id": 2,
     "image": "./img/sertifikat/webDicodingExpert.png",
     "title": "Dicoding",
-    "desc": "Menjadi Front-End Web Developer Expert"
+    "desc": "Menjadi Front-End Web Developer Expert",
+    "year": 2023
   }
 ]
