@@ -12,5 +12,12 @@
     "title": "Dicoding",
     "desc": "Menjadi Front-End Web Developer Expert",
     "year": 2023
+  },
+  {
+    "id": 3,
+    "image": "./img/sertifikat/sertifikat_binar.jpg",
+    "title": "Binar Academy",
+    "desc": "Fullstack Web Development",
+    "year": 2023
   }
 ]
