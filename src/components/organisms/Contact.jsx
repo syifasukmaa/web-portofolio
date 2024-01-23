@@ -11,12 +11,12 @@ function Contact() {
   return (
     <section
       id='contact'
-      className='w-full py-44 md:pt-18 font-poppins'
+      className='w-full py-44 md:pt-18 font-poppins bg-ygBlue dark:bg-dark200'
     >
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.7, amount: 0.5 }}
         variants={{
           visible: { opacity: 1, scale: 1 },

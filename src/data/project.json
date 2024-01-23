@@ -42,9 +42,9 @@
   {
     "id": 5,
     "name": "Preducation",
-    "desc": "Preducation merupakan website berbagai kursus mengenai teknologi digital seperti Android Development dan lain-lain",
-    "github": "https://github.com/LMS-Binar-C6",
-    "preview": "https://preducation-dashboard.up.railway.app/",
+    "desc": "Preducation merupakan website berbagai kursus mengenai teknologi digital seperti Android Development dan lain-lain, serta terhubung dengan aplikasi Android ",
+    "github": "https://github.com/syifasukmaa/preducation-frontend.git",
+    "preview": "https://preducation.vercel.app/",
     "stack": "Next JS, TailwindCSS",
     "imgUrl": "/img/preducation.png",
     "process": "Done"

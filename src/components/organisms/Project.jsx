@@ -5,7 +5,7 @@ function Project() {
   return (
     <section
       id='project'
-      className='w-full py-28 md:pt-18 font-poppins'
+      className='w-full py-28 md:pt-18 font-poppins bg-ygBlue dark:bg-dark200'
     >
       <div className='w-[90%] mx-auto lg:w-[75%]'>
         <div className='text-center'>

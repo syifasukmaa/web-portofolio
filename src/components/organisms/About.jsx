@@ -8,22 +8,22 @@ function About() {
       id='about'
       className='w-full pb-20 pt-18 md:pt-28 font-poppins'
     >
-      <motion.div
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, amount: 0.5 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        className='w-[90%] mx-auto lg:w-[75%] pt-12 md:pt-0'
-      >
+      <div className='w-[90%] mx-auto lg:w-[75%] pt-12 md:pt-0'>
         <div className='text-center'>
           <h3 className='text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 '>About Me</h3>
           <p className='pt-2 font-light text-greys dark:text-ygPurple md:text-xl dark:font-normal'>Get to know me</p>
         </div>
-        <div className='flex flex-col items-center mt-2 lg:flex-row'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false }}
+          transition={{ duration: 0.7, amount: 0.7 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className='flex flex-col items-center mt-2 lg:flex-row'
+        >
           <img
             src='./img/Laptop3d.png'
             alt='laptop 3d'
@@ -64,8 +64,8 @@ function About() {
               </Button>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

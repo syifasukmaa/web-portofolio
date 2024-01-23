@@ -8,13 +8,13 @@ function Footer() {
     <div>
       <footer
         id='contact'
-        className='w-full p-2 md:pt-18 font-poppins bg-dark200'
+        className='w-full p-2 md:pt-18 font-poppins bg-dark300 dark:bg-dark100'
       >
         <div className='w-full mx-auto'>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-col items-center justify-center w-full pt-3'>
               <div className='flex flex-col items-center justify-center w-full md:flex-col'>
-                <p className='my-6 text-4xl font-bold text-blue dark:text-darkBlue'>Syifa Sukma</p>
+                <p className='my-6 text-3xl font-bold text-blue dark:text-darkBlue'>Syifa Sukma</p>
                 <p className='mt-2 mb-5 text-xl font-bold text-white dark:text-dark700'>Front-End Web Developer</p>
 
                 <nav className='flex-col items-center justify-center hidden mt-4 lg:flex md:justify-center lg:items-center lg:border-none lg:bg-transparent lg:shadow-none lg:flex-row'>

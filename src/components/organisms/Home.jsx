@@ -1,6 +1,7 @@
 import Button from '../atoms/Button';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import { slideIn } from '../../utils/motion';
 
 function Home() {
   return (
@@ -11,13 +12,8 @@ function Home() {
       <div className='flex flex-col items-center justify-between pt-32 mx-auto text-center md:text-left lg:items-center pb-14 md:pt-36 lg:pt-48 md:flex-row font-poppins'>
         <motion.div
           initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, amount: 0.5 }}
-          variants={{
-            visible: { x: '0' },
-            hidden: { x: '-200px' },
-          }}
+          whileInView='show'
+          variants={slideIn('left', 'tween', 0.5, 0.7)}
           className='mb-6'
         >
           <div className='text-2xl font-bold font-poppins xl:text-4xl md:text-3xl '>
@@ -37,7 +33,7 @@ function Home() {
           </div>
           <Button
             styling={
-              'rounded-full bg-blue dark:bg-light500 py-3 px-7 mt-6 font-bold text-white transition-all duration-500 ease-in-out md:py-2 md:px-5  lg:py-2.5 lg:px-7 hover:bg-darkBlue dark:hover:bg-light300 dark:text-dark100 flex'
+              'rounded-full bg-blue dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-white transition-all duration-500 ease-in-out md:py-2 md:px-5  lg:py-2.5 lg:px-7 hover:bg-darkBlue dark:hover:bg-light300 dark:text-dark100 flex'
             }
             click={() =>
               window.open(
@@ -82,7 +78,7 @@ function Home() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
           }}
-          className='self-center hidden max-w-lg rounded-full md:justify-end md:flex gradient-primary'
+          className='flex self-center max-w-lg rounded-full md:justify-end md:flex gradient-primary'
         >
           <img
             src='/img/sipa.jpg'

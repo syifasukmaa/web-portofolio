@@ -5,7 +5,7 @@ export default function Certification() {
   return (
     <section
       id='certificate'
-      className='w-full py-28 md:pt-18 font-poppins bg-ygBlue dark:bg-dark200'
+      className='w-full py-28 md:pt-18 font-poppins'
     >
       <div className='w-[90%] mx-auto lg:w-[75%]'>
         <div className='text-center'>
