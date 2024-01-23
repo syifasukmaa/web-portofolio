@@ -1,16 +1,9 @@
 import educations from '../../data/education.json';
-import { slideIn } from '../../utils/motion';
 import ResumeBody from '../atoms/ResumeBody';
-import { motion } from 'framer-motion';
 
 export default function EducationList() {
   return (
-    <motion.div
-      variants={slideIn('left', 'tween', 0.5, 0.9)}
-      initial='hidden'
-      whileInView='show'
-      className='relative top-4'
-    >
+    <div className='relative top-4'>
       <div className='flex flex-col w-[6px] h-[415px] lg:h-[350px] mt-4 rounded-md bg-blue dark:bg-darkBlue'></div>
 
       <div className='absolute top-0 grid w-full grid-cols-1 gap-8 left-10'>
@@ -27,6 +20,6 @@ export default function EducationList() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

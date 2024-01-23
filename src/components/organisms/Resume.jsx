@@ -1,5 +1,7 @@
+import { slideIn } from '../../utils/motion';
 import CertficationResumeList from '../molecules/CertficationResumeList';
 import EducationList from '../molecules/EducationList';
+import { motion } from 'framer-motion';
 
 export default function Resume() {
   return (
@@ -17,15 +19,25 @@ export default function Resume() {
 
         {/* Body */}
         <div className='flex flex-col justify-between mt-8 md:flex-row'>
-          <div className='flex-col w-5/6 md:w-1/2'>
+          <motion.div
+            variants={slideIn('left', 'tween', 0.5, 0.5)}
+            initial='hidden'
+            whileInView='show'
+            className='flex-col w-5/6 md:w-1/2'
+          >
             <p className='text-2xl text-left text-dark100 dark:text-dark700'>Education's</p>
             <EducationList />
-          </div>
+          </motion.div>
 
-          <div className='w-5/6 md:ml-10 mt-28 md:mt-0 md:w-1/2'>
+          <motion.div
+            variants={slideIn('right', 'tween', 0.5, 0.5)}
+            initial='hidden'
+            whileInView='show'
+            className='w-5/6 md:ml-10 mt-28 md:mt-0 md:w-1/2'
+          >
             <p className='text-2xl text-left text-dark100 dark:text-dark700'>Certificates</p>
             <CertficationResumeList />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,16 +1,9 @@
 import sertifications from '../../data/sertifikasi.json';
-import { slideIn } from '../../utils/motion';
 import ResumeBody from '../atoms/ResumeBody';
-import { motion } from 'framer-motion';
 
 export default function CertficationResumeList() {
   return (
-    <motion.div
-      variants={slideIn('right', 'tween', 0.5, 1.5)}
-      initial='hidden'
-      whileInView='show'
-      className='relative top-4 md:left-2'
-    >
+    <div className='relative top-4 md:left-2'>
       {/* height dinamis */}
       <div className='flex flex-col w-[6px] h-[610px] lg:h-[535px] mt-4 rounded-md bg-blue dark:bg-darkBlue'></div>
 
@@ -28,6 +21,6 @@ export default function CertficationResumeList() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
