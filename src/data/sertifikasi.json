@@ -19,5 +19,12 @@
     "title": "Binar Academy",
     "desc": "Fullstack Web Development",
     "year": 2023
+  },
+  {
+    "id": 4,
+    "image": "./img/sertifikat/sertifikat_otakkanan.png",
+    "title": "PT Otak Kanan",
+    "desc": "Fullstack Web Development",
+    "year": 2024
   }
 ]

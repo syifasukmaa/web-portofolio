@@ -37,7 +37,7 @@ function Home() {
             }
             click={() =>
               window.open(
-                'https://drive.google.com/file/d/1azFu_upXzkcphLffpqfkU_mD7QRHBsow/view?usp=sharing',
+                'https://drive.google.com/file/d/1Y9pqWosIoYHN2N8hHEMyVeSfPael6kTx/view?usp=sharing',
                 '_blank',
               )
             }
@@ -81,7 +81,7 @@ function Home() {
           className='flex self-center max-w-lg rounded-full md:justify-end md:flex gradient-primary'
         >
           <img
-            src='/img/sipa.jpg'
+            src='/img/sipa.png'
             alt='photo sipa'
             className='relative p-1.5 rounded-full w-48 lg:w-64'
           />

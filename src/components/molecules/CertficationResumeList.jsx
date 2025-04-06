@@ -5,7 +5,7 @@ export default function CertficationResumeList() {
   return (
     <div className='relative top-4 md:left-2'>
       {/* height dinamis */}
-      <div className='flex flex-col w-[6px] h-[610px] lg:h-[535px] mt-4 rounded-md bg-blue dark:bg-darkBlue'></div>
+      <div className='flex flex-col w-[6px] h-[820px] lg:h-[732px] mt-4 rounded-md bg-blue dark:bg-darkBlue'></div>
 
       <div className='absolute top-0 grid w-full grid-cols-1 gap-8 left-10'>
         {sertifications.map((sertifications) => (

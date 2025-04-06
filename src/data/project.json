@@ -48,5 +48,15 @@
     "stack": "Next JS, TailwindCSS",
     "imgUrl": "/img/preducation.png",
     "process": "Done"
+  },
+  {
+    "id": 6,
+    "name": "Masjid Jami At Taubah Website",
+    "desc": "Website Masjid Jami At Taubah yang berisi informasi mengenai layanan dan bantuan sosial yang ada di masjid, beserta dashboard admin untuk mengelola data masjid",
+    "github": "-",
+    "preview": "https://masjidjamiattaubahjuanda.com/",
+    "stack": "Laravel, Blade, TailwindCSS",
+    "imgUrl": "/img/masjid.png",
+    "process": "On Progress"
   }
 ]

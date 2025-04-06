@@ -39,8 +39,8 @@ function About() {
             </h4>
             <p className='mt-1 text-left text-md text-ygPurple dark:text-dark600'>
               5th semester student majoring in information systems at STT Terpadu Nurul Fikri has logical thinking
-              skills and leadership that allow me to effectively solve all kinds of problems. I have a great interest in
-              the IT industry, especially in the fields of web development.
+              skills that allow me to effectively solve all kinds of problems. I have a great interest in the IT
+              industry, especially in the fields of web development and data management(administration).
             </p>
             <div className='flex mt-2'>
               <Button
