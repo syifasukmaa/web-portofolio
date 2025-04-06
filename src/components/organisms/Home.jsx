@@ -7,7 +7,7 @@ function Home() {
   return (
     <section
       id='home'
-      className='w-[90%] mx-auto lg:w-[75%]'
+      className='w-[90%] mx-auto lg:w-[75%] pt-18 md:pt-16'
     >
       <div className='flex flex-col items-center justify-between pt-32 mx-auto text-center md:text-left lg:items-center pb-14 md:pt-36 lg:pt-48 md:flex-row font-poppins'>
         <motion.div
