@@ -22,5 +22,29 @@
     "img": "/img/stack/figma.svg",
     "alt": "image figma",
     "text": "Figma"
+  },
+  {
+    "id": 5,
+    "img": "/img/stack/msword.png",
+    "alt": "image ms word",
+    "text": "MS Word"
+  },
+  {
+    "id": 6,
+    "img": "/img/stack/msexcel.png",
+    "alt": "image ms excel",
+    "text": "MS Excel"
+  },
+  {
+    "id": 7,
+    "img": "/img/stack/gdocs.png",
+    "alt": "image google docs",
+    "text": "Google Docs"
+  },
+  {
+    "id": 8,
+    "img": "/img/stack/spreadsheet.png",
+    "alt": "image spreadsheet",
+    "text": "Spreadsheet"
   }
 ]

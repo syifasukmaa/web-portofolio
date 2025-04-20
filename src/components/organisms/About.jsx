@@ -34,13 +34,14 @@ function About() {
               Hello 👋 I'm <span className='text-blue dark:text-darkBlue'>Syifasukma</span>
             </h3>
             <h4 className='mt-2 text-xl font-semibold text-ygPurple dark:text-dark600'>
-              A <span className='text-blue dark:text-darkBlue'>Front-End Web Developer</span> 🧑‍💻 based in{' '}
+              A <span className='text-blue dark:text-darkBlue'>Front-End Web Developer</span> &{' '}
+              <span className='text-cyan-600 dark:text-cyan-600'>Admin</span> 🧑‍💻 based in{' '}
               <span className='text-blue dark:text-darkBlue'>Indonesia</span>
             </h4>
             <p className='mt-1 text-left text-md text-ygPurple dark:text-dark600'>
-              5th semester student majoring in information systems at STT Terpadu Nurul Fikri has logical thinking
+              A Final year student majoring in information systems at STT Terpadu Nurul Fikri has logical thinking
               skills that allow me to effectively solve all kinds of problems. I have a great interest in the IT
-              industry, especially in the fields of web development and data management(administration).
+              industry, especially in the fields of web development and data management (administration).
             </p>
             <div className='flex mt-2'>
               <Button
