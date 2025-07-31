@@ -25,19 +25,20 @@ function Home() {
             <p className='text-ygPurple dark:text-primary100'>I am a</p>
             <TypeAnimation
               className='text-transparent gradient-secondary bg-clip-text'
-              sequence={[' Front End Web Developer', 2000, ' Student Collage', 2000]}
+              sequence={[' Front End Web Developer', 2000, 'Admin', 2000]}
               wrapper='span'
               speed={50}
               repeat={Infinity}
             />
           </div>
+          {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
           <Button
             styling={
               'rounded-full bg-blue dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-white transition-all duration-500 ease-in-out md:py-2 md:px-5  lg:py-2.5 lg:px-7 hover:bg-darkBlue dark:hover:bg-light300 dark:text-dark100 flex'
             }
             click={() =>
               window.open(
-                'https://drive.google.com/file/d/1Y9pqWosIoYHN2N8hHEMyVeSfPael6kTx/view?usp=sharing',
+                'https://drive.google.com/file/d/1dwvVCvxlGdHtxHIdVdb0fihSXGDSiQoB/view?usp=sharing',
                 '_blank',
               )
             }

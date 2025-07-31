@@ -3,6 +3,7 @@ import CardItemBody from '../atoms/CardItemBody';
 import PrevButton from '../atoms/PrevButton';
 import CodeButton from '../atoms/CodeButton';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 
 const CardItem = ({ project }) => {
   return (
@@ -20,11 +21,13 @@ const CardItem = ({ project }) => {
         className='w-full transition-all duration-500 ease-in-out bg-white rounded-lg shadow-lg shadow-blue/40 dark:bg-dark200 drop-shadow-lg hover:scale-125'
       >
         <div className='w-full overflow-hidden rounded-t-lg img'>
-          <img
-            src={project.imgUrl}
-            alt={project.name}
-            className='w-full bg-cover'
-          />
+          <Link to={`/projects/${project.id}`}>
+            <img
+              src={project.imgUrl}
+              alt={project.name}
+              className='w-full bg-cover'
+            />
+          </Link>
         </div>
 
         <div className='p-5'>

@@ -39,9 +39,8 @@ function About() {
               <span className='text-blue dark:text-darkBlue'>Indonesia</span>
             </h4>
             <p className='mt-1 text-left text-md text-ygPurple dark:text-dark600'>
-              A Final year student majoring in information systems at STT Terpadu Nurul Fikri has logical thinking
-              skills that allow me to effectively solve all kinds of problems. I have a great interest in the IT
-              industry, especially in the fields of web development and data management (administration).
+              Fresh Graudate information systems majoring. I have a great interest in the IT industry, especially in the
+              fields of web development and data management (administration).
             </p>
             <div className='flex mt-2'>
               <Button

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Home from './components/organisms/Home';
 import About from './components/organisms/About';
-import Contact from './components/organisms/Contact';
+// import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
 import Navbar from './components/organisms/Navbar';
 import Project from './components/organisms/Project';
@@ -35,7 +35,7 @@ function App() {
         <Stack />
         <Project />
         <Certification />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
         <Link
           to='home'
