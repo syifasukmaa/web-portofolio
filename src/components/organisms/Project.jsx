@@ -22,10 +22,12 @@ function Project() {
 
         <div className='flex items-center justify-center mt-10'>
           <button
-            className='px-4 py-2 text-white transition rounded-lg shadow-lg bg-purple hover:bg-pink-600 hover:shadow-xl'
+            className={`px-4 py-2 text-white transition rounded-lg shadow-lg hover:shadow-xl ${
+              visible ? 'bg-dark600 hover:bg-darkk400' : 'bg-purple hover:bg-pink-600'
+            }`}
             onClick={handleVisible}
           >
-            Show More
+            {visible ? 'Show Less' : 'Show More'}
           </button>
         </div>
       </div>
