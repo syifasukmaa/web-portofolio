@@ -1,7 +1,13 @@
 import CardList from '../molecules/CardList';
 import allProject from '../../data/project.json';
+import { useState } from 'react';
 
 function Project() {
+  const [visible, setVisible] = useState(false);
+  const handleVisible = () => {
+    setVisible(!visible);
+  };
+
   return (
     <section
       id='project'
@@ -12,7 +18,16 @@ function Project() {
           <h3 className='text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 '>Projects</h3>
           <p className='pt-2 font-light text-greys md:text-xl dark:text-ygPurple dark:font-normal'>My work So Far</p>
         </div>
-        <CardList projects={allProject} />
+        <CardList projects={visible ? allProject : allProject.slice(0, 3)} />
+
+        <div className='flex items-center justify-center mt-10'>
+          <button
+            className='px-4 py-2 text-white transition rounded-lg shadow-lg bg-purple hover:bg-pink-600 hover:shadow-xl'
+            onClick={handleVisible}
+          >
+            Show More
+          </button>
+        </div>
       </div>
     </section>
   );

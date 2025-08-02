@@ -1,62 +1,79 @@
 [
   {
-    "id": 1,
-    "name": "First Website",
-    "desc": "Website Pertama yang dibuat dengan rapih dan dikoreksi oleh dicoding academy sebagai tugas akhir dasar pemrograman web",
-    "github": "https://github.com/syifasukmaa/JKT48_Dicoding",
-    "preview": "https://jkt48-dicoding.netlify.app/",
-    "stack": "HTML, CSS, JavaScript",
-    "imgUrl": "/img/firstproject.png",
-    "process": "Done"
-  },
-  {
     "id": 2,
     "name": "ShanDay Apps",
-    "desc": "ShanDay merupakan project akhir dari dicoding academy untuk membuat rekomendasi restaurant menggunakan API Dicoding.",
+    "desc": "ShanDay adalah proyek akhir dari Dicoding Academy yang dirancang untuk memberikan rekomendasi restoran terbaik melalui integrasi API Dicoding. Website ini memudahkan pengguna menemukan tempat makan sesuai selera dengan tampilan modern, responsif, dan ringan. ShanDay tidak hanya menampilkan daftar restoran, tetapi juga memberikan detail penting seperti rating, lokasi, dan kategori makanan sehingga pengalaman mencari kuliner menjadi lebih praktis.",
     "github": "https://github.com/syifasukmaa/ShanDay-Apps",
     "preview": "https://shanday.netlify.app/",
-    "stack": " SASS, nodeJS, webpack",
+    "stack": ["SASS", "nodeJS", "webpack"],
     "imgUrl": "/img/shanday.png",
+    "gallery": ["/img/shanday.png", "/img/shanday-2.png", "/img/shanday-3.png"],
     "process": "Done"
   },
   {
     "id": 3,
     "name": "Savedueet Apps",
-    "desc": "Savedueet merupakan website yang berguna untuk mencatat pemasukan dan pengeluaran keuangan yang dibuat dengan react js",
+    "desc": "Savedueet adalah aplikasi pengelolaan keuangan berbasis web yang memudahkan pengguna mencatat pemasukan dan pengeluaran sehari-hari. Dibangun dengan React JS dan Bootstrap, aplikasi ini memiliki tampilan sederhana namun fungsional, sehingga cocok untuk siapa saja yang ingin lebih disiplin dalam mengatur keuangan pribadi. Savedueet membantu mencatat setiap transaksi dan memberikan gambaran ringkas arus keuangan agar pengguna dapat mengontrol pengeluaran dengan lebih baik.",
     "github": "https://github.com/syifasukmaa/savedueet",
     "preview": "https://savedueet.vercel.app/",
-    "stack": "React JS, Bootstrap",
+    "stack": ["React JS", "Bootstrap"],
     "imgUrl": "/img/savedueet.png",
+    "gallery": ["/img/savedueet.png", "/img/savedueet-2.png", "/img/savedueet-3.png"],
     "process": "Done"
   },
   {
     "id": 4,
     "name": "Personal Notes",
-    "desc": "Personal notes merupakan website untuk mencatat kegiatan sehari hari yang dibuat dengan react js yang disimpan di localstorage",
+    "desc": "Personal Notes adalah aplikasi catatan digital sederhana yang membantu pengguna mencatat berbagai kegiatan atau ide penting secara cepat. Aplikasi ini menyimpan catatan di local storage sehingga data tetap tersimpan walaupun halaman ditutup. Dibangun menggunakan React JS dan TailwindCSS, aplikasi ini memiliki antarmuka bersih, responsif, dan mudah digunakan, sehingga cocok untuk pelajar, pekerja, atau siapa pun yang ingin lebih teratur dalam aktivitas sehari-hari.",
     "github": "https://github.com/syifasukmaa/personal-note",
     "preview": "https://notes-shanday.netlify.app/",
-    "stack": "React JS, TailwindCSS",
+    "stack": ["React JS", "TailwindCSS"],
     "imgUrl": "/img/notes.png",
+    "gallery": ["/img/notes.png", "/img/notes-2.png", "/img/notes-3.png"],
     "process": "Done"
   },
   {
     "id": 5,
     "name": "Preducation",
-    "desc": "Preducation merupakan website berbagai kursus mengenai teknologi digital seperti Android Development dan lain-lain, serta terhubung dengan aplikasi Android ",
+    "desc": "Preducation adalah platform kursus online yang menghadirkan berbagai materi tentang teknologi digital, seperti pengembangan Android, pemrograman, dan topik menarik lainnya. Website ini dirancang dengan Next JS dan TailwindCSS untuk memberikan performa cepat dan tampilan modern. Dengan integrasi SWR, data selalu diperbarui secara real-time sehingga pengguna mendapatkan pengalaman belajar yang interaktif. Preducation juga terhubung dengan aplikasi Android untuk memudahkan akses belajar di mana saja.",
     "github": "https://github.com/syifasukmaa/preducation-frontend.git",
     "preview": "https://preducation.vercel.app/",
-    "stack": "Next JS, TailwindCSS",
+    "stack": ["Next JS", "TailwindCSS, SWR"],
     "imgUrl": "/img/preducation.png",
+    "gallery": ["/img/preducation.png", "/img/preducation-2.png", "/img/preducation-3.png"],
     "process": "Done"
   },
   {
     "id": 6,
     "name": "Masjid Jami At Taubah Website",
-    "desc": "Website Masjid Jami At Taubah yang berisi informasi mengenai layanan dan bantuan sosial yang ada di masjid, beserta dashboard admin untuk mengelola data masjid",
+    "desc": "Website resmi Masjid Jami At Taubah yang menyajikan informasi lengkap mengenai layanan dan program bantuan sosial yang tersedia di masjid. Melalui website ini, jamaah dapat dengan mudah mengakses informasi tentang zakat, qurban, kegiatan sosial, serta berbagai agenda masjid lainnya. Website ini dilengkapi dengan dashboard admin berbasis Laravel untuk mempermudah pengelolaan data, sehingga lebih efektif dan efisien dalam mendukung kegiatan kemasjidan.",
     "github": "-",
     "preview": "https://masjidjamiattaubahjuanda.com/",
-    "stack": "Laravel, Blade, TailwindCSS",
+    "stack": ["Laravel", "Blade", "TailwindCSS"],
     "imgUrl": "/img/masjid.png",
+    "gallery": ["/img/masjid.png", "/img/masjid-2.png", "/img/masjid-3.png"],
+    "process": "Done"
+  },
+  {
+    "id": 7,
+    "name": "Artist Personal Website",
+    "desc": "Website personal tribute yang didedikasikan untuk Shani Indira, mantan anggota JKT48. Website ini menampilkan perjalanan karier, galeri foto, serta berbagai momen spesial sebagai bentuk apresiasi dan kenangan atas dedikasinya di dunia hiburan. Dibangun dengan Next JS, TailwindCSS, dan Swiper JS, website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi, sehingga pengunjung bisa merasakan pengalaman yang hangat dan personal.",
+    "gihtub": "https://github.com/syifasukmaa/website-shani-indira",
+    "preview": "https://shani-indira.vercel.app/",
+    "stack": ["Next JS", "TailwindCSS", "Zustand", "Swiper JS"],
+    "imgUrl": "/img/personal-blog.png",
+    "gallery": ["/img/personal-blog.png", "/img/personal-blog-2.png", "/img/personal-blog-3.png"],
+    "process": "Done"
+  },
+  {
+    "id": 8,
+    "name": "Pokedex07",
+    "desc": "Pokedex07 adalah website interaktif untuk para penggemar Pokémon. Menggunakan API Pokémon, website ini menyajikan daftar karakter Pokémon lengkap beserta detail informasi setiap karakter. Dengan desain responsif dan fitur pencarian yang mudah digunakan, Pokedex07 memudahkan pengguna menjelajahi berbagai Pokémon sekaligus mempelajari detail seperti tipe, kemampuan, dan statistik. Website ini cocok bagi penggemar maupun pemula yang ingin mengenal dunia Pokémon lebih dekat.",
+    "github": "https://github.com/syifasukmaa/pokedex",
+    "preview": "https://pokedex07.netlify.app/",
+    "stack": ["Next JS", "TailwindCSS", "Zustand"],
+    "imgUrl": "/img/pokedex07.png",
+    "gallery": ["/img/pokedex07.png", "/img/pokedex07-2.png", "/img/pokedex07-3.png"],
     "process": "On Progress"
   }
 ]
