@@ -11,6 +11,8 @@ const CardItem = ({ project }) => {
     <motion.div
       className='relative overflow-hidden h-44 group hover:rounded-lg'
       variants={galleryVariant}
+      initial='hidden'
+      animate='show'
     >
       <img
         src={project.imgUrl}

@@ -18,10 +18,10 @@ export const slideIn = (direction, type, delay, duration) => ({
 });
 
 export const galleryContainerVariant = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   show: {
+    opacity: 1,
     transition: {
-      delayChildren: 0.8,
       staggerChildren: 0.2,
     },
   },
