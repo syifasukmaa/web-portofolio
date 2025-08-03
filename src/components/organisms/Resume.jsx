@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <section
       id='resume'
-      className='w-full pb-48 pt-28 md:pt-18 font-poppins bg-ygBlue dark:bg-dark200'
+      className='w-full pb-44 pt-28 md:pt-18 font-poppins bg-ygBlue dark:bg-dark200'
     >
       <div className='w-[90%] mx-auto lg:w-[75%]'>
         <div className='text-center'>
