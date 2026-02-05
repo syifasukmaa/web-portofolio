@@ -11,7 +11,7 @@ function About() {
       <div className='w-[90%] mx-auto lg:w-[75%] pt-12 md:pt-0'>
         <div className='text-center'>
           <h3 className='text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 '>About Me</h3>
-          <p className='pt-2 font-light text-greys dark:text-ygPurple md:text-xl dark:font-normal'>Get to know me</p>
+          <p className='pt-2 font-light text-greys dark:text-primary400 md:text-xl dark:font-normal'>Get to know me</p>
         </div>
         <motion.div
           initial='hidden'
@@ -38,29 +38,27 @@ function About() {
               <span className='text-cyan-600 dark:text-cyan-600'>Admin</span> 🧑‍💻 based in{' '}
               <span className='text-blue dark:text-darkBlue'>Indonesia</span>
             </h4>
-            <p className='mt-1 text-left text-md text-ygPurple dark:text-dark600'>
+            <p className='mt-3 text-left text-md text-ygPurple dark:text-dark600'>
               Fresh Graudate information systems majoring. I have a great interest in the IT industry, especially in the
               fields of web development and data management (administration).
             </p>
             <div className='flex mt-2'>
               <Button
-                styling={
-                  'rounded-md mt-4 flex py-1 px-4 cursor-pointer text-lg items-center transition-all ease-in-out lg:mx-0 lg:mr-0 font-dmsans text-dark100 dark:text-dark300 dark:bg-darkBlue bg-blue border-2 border-darkBlue dark:border-blue'
-                }
+                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans bg-greys/30 text-greys border border-greys/30 hover:bg-greys hover:text-white dark:bg-dark600/30 dark:text-dark700 dark:border-primary100/20 dark:hover:bg-dark600
+  '
                 click={() => window.open('https://github.com/syifasukmaa', '_blank')}
               >
-                <BsGithub className='dark:hover:text-light500 dark:text-dark700' />
-                <p className='ml-2 font-semibold text-white dark:text-dark700'>Github</p>
+                <BsGithub className='text-inherit' />
+                <p className='ml-2 font-semibold text-inherit'>Github</p>
               </Button>
 
               <Button
-                styling={
-                  'rounded-md mt-4 flex py-1 px-4 cursor-pointer text-lg items-center transition-all ease-in-out lg:mr-0 font-dmsans text-dark100 dark:text-dark300 dark:bg-darkBlue bg-blue border-2 border-darkBlue dark:border-blue ml-2'
-                }
+                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans ml-2 bg-blue/30 text-blue border border-blue/30 hover:bg-blue hover:text-white dark:bg-darkBlue/30 dark:text-primary100 dark:border-darkBlue/30 dark:hover:bg-darkBlue dark:hover:text-white
+  '
                 click={() => window.open('https://www.linkedin.com/in/syifasukma/', '_blank')}
               >
-                <BsLinkedin className='bg-transparent rounded-full hover:text-blue dark:hover:text-light500 dark:text-dark700' />
-                <p className='ml-2 font-semibold text-white dark:text-dark700'>LinkedIn</p>
+                <BsLinkedin className='text-inherit' />
+                <p className='ml-2 font-semibold text-inherit'>LinkedIn</p>
               </Button>
             </div>
           </div>

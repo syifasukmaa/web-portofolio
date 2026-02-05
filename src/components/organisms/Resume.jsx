@@ -12,13 +12,13 @@ export default function Resume() {
       <div className='w-[90%] mx-auto lg:w-[75%]'>
         <div className='text-center'>
           <h3 className='text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 '>Resume</h3>
-          <p className='pt-2 font-light text-greys md:text-xl dark:text-ygPurple dark:font-normal'>
+          <p className='pt-2 font-light text-greys md:text-xl dark:text-primary400 dark:font-normal'>
             A Years Of Experience
           </p>
         </div>
 
         {/* Body */}
-        <div className='flex flex-col justify-between mt-8 md:flex-row'>
+        <div className='flex flex-col justify-between mt-8 md:flex-row '>
           <motion.div
             variants={slideIn('left', 'tween', 0.5, 0.5)}
             initial='hidden'
@@ -35,7 +35,7 @@ export default function Resume() {
             whileInView='show'
             className='w-5/6 md:ml-10 mt-28 md:mt-0 md:w-1/2'
           >
-            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Certificates</p>
+            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Work's</p>
             <CertficationResumeList />
           </motion.div>
         </div>

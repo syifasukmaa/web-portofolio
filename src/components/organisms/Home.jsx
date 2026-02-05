@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { slideIn } from '../../utils/motion';
 
 function Home() {
+  const CV = 'https://drive.google.com/file/d/1dwvVCvxlGdHtxHIdVdb0fihSXGDSiQoB/view?usp=sharing';
   return (
     <section
       id='home'
@@ -16,13 +17,13 @@ function Home() {
           variants={slideIn('left', 'tween', 0.5, 0.7)}
           className='mb-6'
         >
-          <div className='text-2xl font-bold font-poppins xl:text-4xl md:text-3xl '>
-            <p className='mb-2 text-ygPurple dark:text-primary100'>Hi👋</p>
-            <p className='mb-2 text-ygPurple dark:text-primary100'>
+          <div className='text-xl font-bold font-poppins xl:text-5xl md:text-3xl '>
+            <p className='mb-2 lg:mb-6 text-ygPurple dark:text-primary100'>Hi👋</p>
+            <p className='mb-4 text-ygPurple dark:text-primary100'>
               My name is
               <span className='text-transparent gradient-secondary bg-clip-text'> Syifa Sukma</span>
             </p>
-            <p className='text-ygPurple dark:text-primary100'>I am a</p>
+            <p className='mb-2 text-ygPurple dark:text-primary100'>I am a</p>
             <TypeAnimation
               className='text-transparent gradient-secondary bg-clip-text'
               sequence={[' Front End Web Developer', 2000, 'Admin', 2000]}
@@ -34,14 +35,9 @@ function Home() {
           {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
           <Button
             styling={
-              'rounded-full bg-blue dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-white transition-all duration-500 ease-in-out md:py-2 md:px-5  lg:py-2.5 lg:px-7 hover:bg-darkBlue dark:hover:bg-light300 dark:text-dark100 flex'
+              'rounded-lg bg-blue/20 dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-blue transition-all duration-500 ease-in-out md:py-2 md:px-5 lg:py-2.5 lg:px-7 hover:bg-blue hover:text-white dark:bg-blue/20 dark:hover:bg-light300 dark:text-blue flex'
             }
-            click={() =>
-              window.open(
-                'https://drive.google.com/file/d/1dwvVCvxlGdHtxHIdVdb0fihSXGDSiQoB/view?usp=sharing',
-                '_blank',
-              )
-            }
+            click={() => window.open(CV, '_blank')}
           >
             <p>Download CV</p>
             <svg
@@ -79,12 +75,12 @@ function Home() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
           }}
-          className='flex self-center max-w-lg rounded-full md:justify-end md:flex gradient-primary'
+          className='flex self-center max-w-lg rounded-lg md:justify-end md:flex gradient-primary'
         >
           <img
             src='/img/sipa.png'
             alt='photo sipa'
-            className='relative p-1.5 rounded-full w-48 lg:w-64'
+            className='relative p-1.5 rounded-lg w-48 lg:w-72'
           />
         </motion.div>
       </div>

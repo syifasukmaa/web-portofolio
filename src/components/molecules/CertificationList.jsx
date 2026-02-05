@@ -31,7 +31,7 @@ export default function CertificationList({ certifacates }) {
             <div className='px-5 pb-5'>
               <p className='text-xl font-medium dark:text-dark700'>{certificate.title}</p>
               <p className='mt-2 text-base font-light dark:text-dark600'>{certificate.desc}</p>
-              <p>{certificate.year}</p>
+              <p className='dark:text-dark600'>{certificate.year}</p>
             </div>
           </motion.div>
         ))}

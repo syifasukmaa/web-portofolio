@@ -2,7 +2,7 @@ export default function StackItem({ data }) {
   return data.map((icon) => (
     <div
       key={icon.id}
-      className='flex flex-col items-center px-0 py-4 shadow-lg shadow-blue/25'
+      className='flex flex-col items-center px-0 py-4 shadow-lg dark:bg-dark200 shadow-blue/25'
     >
       <img
         src={icon.img}

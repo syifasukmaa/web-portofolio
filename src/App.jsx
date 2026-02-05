@@ -9,6 +9,7 @@ import Stack from './components/organisms/Stack';
 import { Link } from 'react-scroll';
 import Certification from './components/organisms/Certification';
 import Resume from './components/organisms/Resume';
+import { FaArrowAltCircleUp, FaArrowUp } from 'react-icons/fa';
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -43,13 +44,10 @@ function App() {
           smooth={true}
           className={`${
             colorChange ? 'hidden' : 'flex'
-          } fixed w-[10%] md:w-[6%] lg:w-[4%] p-3 cursor-pointer border-2 border-transparent hover:bg-white  dark:hover:bg-dark700 hover:border-blue mx-auto bottom-14 right-10 rounded-full bg-blue`}
+          } fixed w-[10%] md:w-[7%] lg:w-[4%] px-3 lg:py-3.5 md:py-3 py-1.5 cursor-pointer border-2 border-transparent hover:bg-white  dark:hover:bg-dark700 hover:border-blue mx-auto bottom-20 lg:14 right-10 rounded-full bg-blue/20 z-[999px]`}
           onClick={handleToTop}
         >
-          <img
-            src='./img/up.svg'
-            className='w-[100%]'
-          />
+          <FaArrowUp className='w-12 md:w-12 h-7 text-blue' />
         </Link>
       </div>
     </>
