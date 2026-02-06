@@ -18,8 +18,8 @@ function Footer() {
         <div className='grid items-start grid-cols-1 gap-8 lg:grid-cols-3'>
           {/* Brand Section */}
           <div className='text-center lg:text-left'>
-            <p className='mb-2 text-3xl font-bold text-blue dark:text-darkBlue'>Syifa Sukma</p>
-            <p className='text-xl font-semibold text-greys dark:text-dark700'>Front-End Web Developer</p>
+            <p className='mb-2 text-xl font-bold md:text-3xl text-blue dark:text-darkBlue'>Syifa Sukma</p>
+            <p className='text-lg font-semibold md:text-xl text-greys dark:text-dark700'>Front-End Web Developer</p>
           </div>
 
           {/* Navigation */}

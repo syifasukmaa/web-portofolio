@@ -43,17 +43,7 @@
     "gallery": ["/img/preducation.png", "/img/preducation-2.png", "/img/preducation-3.png"],
     "process": "Done"
   },
-  {
-    "id": 6,
-    "name": "Masjid Jami At Taubah Website",
-    "desc": "Website resmi Masjid Jami At Taubah yang menyajikan informasi lengkap mengenai layanan dan program bantuan sosial yang tersedia di masjid. Melalui website ini, jamaah dapat dengan mudah mengakses informasi tentang zakat, qurban, kegiatan sosial, serta berbagai agenda masjid lainnya. Website ini dilengkapi dengan dashboard admin berbasis Laravel untuk mempermudah pengelolaan data, sehingga lebih efektif dan efisien dalam mendukung kegiatan kemasjidan.",
-    "github": "-",
-    "preview": "https://masjidjamiattaubahjuanda.com/",
-    "stack": ["Laravel", "Blade", "TailwindCSS"],
-    "imgUrl": "/img/masjid.png",
-    "gallery": ["/img/masjid.png", "/img/masjid-2.png", "/img/masjid-3.png"],
-    "process": "Done"
-  },
+
   {
     "id": 7,
     "name": "Artist Personal Website",
@@ -75,5 +65,16 @@
     "imgUrl": "/img/pokedex07.png",
     "gallery": ["/img/pokedex07.png", "/img/pokedex07-2.png", "/img/pokedex07-3.png"],
     "process": "On Progress"
+  },
+  {
+    "id": 6,
+    "name": "Masjid Jami At Taubah Website",
+    "desc": "Website resmi Masjid Jami At Taubah yang menyajikan informasi lengkap mengenai layanan dan program bantuan sosial yang tersedia di masjid. Melalui website ini, jamaah dapat dengan mudah mengakses informasi tentang zakat, qurban, kegiatan sosial, serta berbagai agenda masjid lainnya. Website ini dilengkapi dengan dashboard admin berbasis Laravel untuk mempermudah pengelolaan data, sehingga lebih efektif dan efisien dalam mendukung kegiatan kemasjidan.",
+    "github": "-",
+    "preview": "#",
+    "stack": ["Laravel", "Blade", "TailwindCSS"],
+    "imgUrl": "/img/masjid.png",
+    "gallery": ["/img/masjid.png", "/img/masjid-2.png", "/img/masjid-3.png"],
+    "process": "Done"
   }
 ]

@@ -44,7 +44,7 @@ function About() {
             </p>
             <div className='flex mt-2'>
               <Button
-                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans bg-greys/30 text-greys border border-greys/30 hover:bg-greys hover:text-white dark:bg-dark600/30 dark:text-dark700 dark:border-primary100/20 dark:hover:bg-dark600
+                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans bg-greys/30 text-greys border border-greys/30 hover:bg-greys hover:text-white dark:bg-dark600/30 dark:text-dark700 dark:border-primary100/20 dark:hover:bg-dark600 dark:hover:text-white
   '
                 click={() => window.open('https://github.com/syifasukmaa', '_blank')}
               >
@@ -53,7 +53,7 @@ function About() {
               </Button>
 
               <Button
-                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans ml-2 bg-blue/30 text-blue border border-blue/30 hover:bg-blue hover:text-white dark:bg-darkBlue/30 dark:text-primary100 dark:border-darkBlue/30 dark:hover:bg-darkBlue dark:hover:text-white
+                styling='rounded-lg mt-4 flex py-1 px-4 cursor-pointer text-lg items-center font-dmsans ml-2 bg-blue/30 text-blue border border-blue/30 hover:bg-blue hover:text-white dark:bg-darkBlue/30 dark:text-white dark:border-darkBlue/30 dark:hover:bg-darkBlue dark:hover:text-white
   '
                 click={() => window.open('https://www.linkedin.com/in/syifasukma/', '_blank')}
               >

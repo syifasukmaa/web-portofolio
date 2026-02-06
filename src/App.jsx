@@ -44,10 +44,10 @@ function App() {
           smooth={true}
           className={`${
             colorChange ? 'hidden' : 'flex'
-          } fixed w-[10%] md:w-[7%] lg:w-[4%] px-3 lg:py-3.5 md:py-3 py-1.5 cursor-pointer border-2 border-transparent hover:bg-white  dark:hover:bg-dark700 hover:border-blue mx-auto bottom-20 lg:14 right-10 rounded-full bg-blue/20 z-[999px]`}
+          } fixed w-[11%] md:w-[7%] lg:w-[4%] px-3 lg:py-3.5 md:py-3 py-1.5 cursor-pointer border-2 border-transparent hover:bg-white  dark:hover:bg-dark700 hover:border-blue mx-auto bottom-20 lg:14 right-10 rounded-full bg-blue/20 z-[999px]`}
           onClick={handleToTop}
         >
-          <FaArrowUp className='w-12 md:w-12 h-7 text-blue' />
+          <FaArrowUp className='w-14 md:w-12 h-7 text-blue' />
         </Link>
       </div>
     </>

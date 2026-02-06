@@ -35,7 +35,7 @@ function Home() {
           {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
           <Button
             styling={
-              'rounded-lg bg-blue/20 dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-blue transition-all duration-500 ease-in-out md:py-2 md:px-5 lg:py-2.5 lg:px-7 hover:bg-blue hover:text-white dark:bg-blue/20 dark:hover:bg-light300 dark:text-blue flex'
+              'rounded-lg bg-blue/20 dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-blue transition-all duration-500 ease-in-out md:py-2 md:px-5 lg:py-2.5 lg:px-7 hover:bg-blue hover:text-white dark:bg-blue/30 dark:hover:bg-light300 dark:text-white flex'
             }
             click={() => window.open(CV, '_blank')}
           >
