@@ -26,7 +26,7 @@ function Home() {
             <p className='mb-2 text-ygPurple dark:text-primary100'>I am a</p>
             <TypeAnimation
               className='text-transparent gradient-secondary bg-clip-text'
-              sequence={[' Front End Web Developer', 2000, 'Admin', 2000]}
+              sequence={[' Front End Web Developer', 2000, 'Customer Service', 2000]}
               wrapper='span'
               speed={50}
               repeat={Infinity}
@@ -66,23 +66,105 @@ function Home() {
             </svg>
           </Button>
         </motion.div>
-        <motion.div
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: false }}
-          transition={{ duration: 0.7, amount: 0.5 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
-          className='flex self-center max-w-lg rounded-lg md:justify-end md:flex gradient-primary'
-        >
+
+        <div className='relative flex items-center justify-center mt-5 md:mt-0'>
+          <svg
+            viewBox='0 0 100 100'
+            xmlns='http://www.w3.org/2000/svg'
+            className='absolute w-[300px] lg:w-[450px] -mt-14 md:-mt-28 -mr-28 md:-mr-32 opacity-10'
+          >
+            <defs>
+              <linearGradient
+                id='fill'
+                x1='0%'
+                y1='0%'
+                x2='100%'
+                y2='0%'
+                gradientTransform='rotate(45 0.5 0.5)'
+              >
+                <stop
+                  offset='0%'
+                  stopColor='#4F46E5'
+                />
+                <stop
+                  offset='100%'
+                  stopColor='#FF7AF9'
+                />
+              </linearGradient>
+            </defs>
+
+            <path
+              d='M83,69Q72,88,51.5,85.5Q31,83,17.5,66.5Q4,50,15.5,30Q27,10,49.5,11Q72,12,83,31Q94,50,83,69Z'
+              fill='url(#fill)'
+            />
+          </svg>
+          <svg
+            viewBox='0 0 100 100'
+            xmlns='http://www.w3.org/2000/svg'
+            className='absolute w-[300px] lg:w-[450px] -mt-10 md:-mt-16 -mr-16 md:-mr-20 opacity-10'
+          >
+            <defs>
+              <linearGradient
+                id='fill'
+                x1='0%'
+                y1='0%'
+                x2='100%'
+                y2='0%'
+                gradientTransform='rotate(45 0.5 0.5)'
+              >
+                <stop
+                  offset='0%'
+                  stopColor='#4F46E5'
+                />
+                <stop
+                  offset='100%'
+                  stopColor='#FF7AF9'
+                />
+              </linearGradient>
+            </defs>
+
+            <path
+              d='M83,69Q72,88,51.5,85.5Q31,83,17.5,66.5Q4,50,15.5,30Q27,10,49.5,11Q72,12,83,31Q94,50,83,69Z'
+              fill='url(#fill)'
+            />
+          </svg>
+          <svg
+            viewBox='0 0 100 100'
+            xmlns='http://www.w3.org/2000/svg'
+            className='absolute w-[300px] lg:w-[450px]'
+          >
+            <defs>
+              <linearGradient
+                id='fill'
+                x1='0%'
+                y1='0%'
+                x2='100%'
+                y2='0%'
+                gradientTransform='rotate(45 0.5 0.5)'
+              >
+                <stop
+                  offset='0%'
+                  stopColor='#4F46E5'
+                />
+                <stop
+                  offset='100%'
+                  stopColor='#FF7AF9'
+                />
+              </linearGradient>
+            </defs>
+
+            <path
+              d='M83,69Q72,88,51.5,85.5Q31,83,17.5,66.5Q4,50,15.5,30Q27,10,49.5,11Q72,12,83,31Q94,50,83,69Z'
+              fill='url(#fill)'
+            />
+          </svg>
+
           <img
             src='/img/sipa.png'
-            alt='photo sipa'
-            className='relative p-1.5 rounded-lg w-48 lg:w-72'
+            alt='Syifa'
+            className='relative z-10 w-80 md:w-[380px] lg:w-[500px] -mt-20 md:-mt-36 lg:-mt-44'
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
