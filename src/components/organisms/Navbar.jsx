@@ -10,57 +10,115 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [colorChange, setColorChange] = useState(false);
 
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 50) {
-      setColorChange(true);
-    } else {
-      setColorChange(false);
-    }
-  };
-
   useEffect(() => {
+    const changeNavbarColor = () => {
+      setColorChange(window.scrollY >= 50);
+    };
+
     window.addEventListener('scroll', changeNavbarColor);
+
+    return () => {
+      window.removeEventListener('scroll', changeNavbarColor);
+    };
   }, []);
 
   return (
     <header
-      id='navbar'
-      className={
-        colorChange
-          ? 'fixed w-full py-3 bg-transparent border-b border-gray-200 dark:border-dark200 backdrop-blur-sm z-50'
-          : 'fixed w-full py-3 bg-transparent z-50'
-      }
+      className={`
+        fixed z-50 transition-all duration-500
+        w-full top-0 left-0
+        ${colorChange ? 'lg:top-5 lg:left-1/2 lg:w-auto lg:-translate-x-1/2' : ''}
+      `}
     >
-      <div className='relative flex items-center justify-between w-[90%] mx-auto lg:w-[75%]'>
-        <img
-          src='/img/logosipa.png'
-          alt='Logo Sipa'
-          width={40}
-          height={30}
-          className='transition-all hover:scale-105'
-        />
-        {isNavOpen ? (
+      <div
+        className={`
+          transition-all duration-500
+
+          ${
+            colorChange
+              ? `
+              lg:px-8
+                lg:py-3
+                lg:rounded-full
+                lg:bg-white/70
+                lg:dark:bg-dark300/70
+                lg:backdrop-blur-lg
+                lg:shadow-lg
+                lg:border
+                lg:border-gray-200
+                lg:dark:border-dark600
+              `
+              : 'lg:py-3'
+          }
+        `}
+      >
+        <div
+          className={`
+            flex items-center justify-between
+            w-[100%] mx-auto lg:w-[75%] px-10 lg:px-0
+            transition-all duration-500
+
+            ${colorChange ? 'md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 bg-white lg:bg-transparent dark:bg-transparent ' : 'py-3 lg:py-0'}
+          `}
+        >
+          <img
+            src='/img/logosipa.png'
+            alt='Logo Sipa'
+            width={40}
+            height={30}
+            className={`
+              transition-all duration-500 hover:scale-105
+              ${colorChange ? 'lg:hidden' : ''}
+            `}
+          />
+
           <Button
-            styling={'absolute block right-0 lg:hidden'}
+            styling='block lg:hidden'
             click={() => setIsNavOpen((prev) => !prev)}
           >
-            <BsXLg className='text-3xl dark:text-dark600' />
+            {isNavOpen ? (
+              <BsXLg className='text-3xl dark:text-dark600' />
+            ) : (
+              <RxHamburgerMenu className='text-3xl dark:text-dark600' />
+            )}
           </Button>
-        ) : (
-          <Button
-            styling={'absolute block right-0 lg:hidden'}
-            click={() => setIsNavOpen((prev) => !prev)}
+
+          {/* MOBILE MENU */}
+          <div
+            className={`
+              absolute top-20 right-5 w-[220px]
+              transition-all duration-300 lg:hidden ${isNavOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-5'}
+            `}
           >
-            <RxHamburgerMenu className='text-3xl font-normal dark:text-dark600' />
-          </Button>
-        )}
-        <div className={isNavOpen ? 'absolute w-full right-0 top-20 max-w-[250px]' : 'hidden lg:flex'}>
-          <nav className='flex flex-col justify-center py-3 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-dark300 dark:border-dark600 lg:dark:bg-transparent lg:items-center lg:border-none lg:bg-transparent lg:shadow-none lg:flex-row'>
+            <nav
+              className='
+                flex flex-col items-center gap-5
+                rounded-2xl
+                bg-white dark:bg-dark300
+                border border-gray-200 dark:border-dark600
+                shadow-xl
+                p-5
+              '
+            >
+              {linkNav.map((link) => (
+                <LinkScroll
+                  key={link.id}
+                  title={link.title}
+                  styling='dark:text-dark600 capitalize'
+                />
+              ))}
+
+              <ToggleSwitch />
+            </nav>
+          </div>
+
+          {/* DESKTOP MENU */}
+          <nav className='hidden lg:flex items-center gap-8'>
             {linkNav.map((link) => (
               <LinkScroll
                 key={link.id}
                 title={link.title}
-                styling={'dark:text-dark600 capitalize'}
+                styling='dark:text-dark600 capitalize'
               />
             ))}
 
@@ -71,5 +129,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;

@@ -14,7 +14,17 @@ export default function ToggleSwitch() {
 
   return (
     <div className='py-2 mx-8 md:mx-4'>
-      <Switch
+      <button
+        className={`flex items-center justify-center w-10 h-10 p-2  transition-all duration-300  rounded-full dark:bg-dark300 hover:scale-105 ${darkSide ? 'dark:bg-gray-300/10' : 'bg-primary100/10'}`}
+        onClick={() => toggleDarkMode(!darkSide)}
+      >
+        {darkSide ? (
+          <MdOutlineDarkMode className='text-2xl text-gray-300' />
+        ) : (
+          <MdOutlineWbSunny className='text-2xl text-primary100' />
+        )}
+      </button>
+      {/* <Switch
         checked={darkSide}
         onChange={toggleDarkMode}
         className={
@@ -32,7 +42,7 @@ export default function ToggleSwitch() {
         ) : (
           <MdOutlineDarkMode className=' mt-[2px] ml-[4px] text-lg' />
         )}
-      </Switch>
+      </Switch> */}
     </div>
   );
 }
