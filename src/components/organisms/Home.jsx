@@ -2,22 +2,25 @@ import Button from '../atoms/Button';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { slideIn } from '../../utils/motion';
+import { BsGithub } from 'react-icons/bs';
 
 function Home() {
+  const buttonStyle =
+    'rounded-xl flex items-center justify-center gap-2 py-3 px-6 font-semibold transition-all duration-300 hover:-translate-y-1';
   const CV = 'https://drive.google.com/file/d/1dwvVCvxlGdHtxHIdVdb0fihSXGDSiQoB/view?usp=sharing';
   return (
     <section
       id='home'
       className='w-[90%] mx-auto lg:w-[75%] pt-18 md:pt-16'
     >
-      <div className='flex flex-col items-center justify-between pt-32 mx-auto text-center md:text-left lg:items-center pb-14 md:pt-36 lg:pt-48 md:flex-row font-poppins'>
+      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-10 lg:gap-0 pt-32 pb-14 md:pt-20 lg:py-40 mx-auto text-center md:text-left font-poppins'>
         <motion.div
           initial='hidden'
           whileInView='show'
           variants={slideIn('left', 'tween', 0.5, 0.7)}
-          className='mb-6'
+          className='w-full md:max-w-[45%] lg:max-w-[50%]'
         >
-          <div className='text-xl font-bold font-poppins xl:text-5xl md:text-3xl '>
+          <div className='text-xl font-bold font-poppins lg:text-4xl md:text-3xl '>
             <p className='mb-2 lg:mb-6 text-ygPurple dark:text-primary100'>Hi👋</p>
             <p className='mb-4 text-ygPurple dark:text-primary100'>
               My name is
@@ -32,42 +35,69 @@ function Home() {
               repeat={Infinity}
             />
           </div>
+          <div className='text-start'>
+            <p className='pt-2 text-md text-ygPurple dark:text-dark600 mt-3'>
+              {' '}
+              Fresh Graudate information systems majoring. I have a great interest in the IT industry, especially in the
+              fields of web development and data management (administration).
+            </p>
+          </div>
           {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
-          <Button
-            styling={
-              'rounded-lg bg-blue/20 dark:bg-light500 mx-auto md:mx-0 py-3 px-7 mt-6 mb-6 md:mb-0 font-bold text-blue transition-all duration-500 ease-in-out md:py-2 md:px-5 lg:py-2.5 lg:px-7 hover:bg-blue hover:text-white dark:bg-blue/30 dark:hover:bg-light300 dark:text-white flex'
-            }
-            click={() => window.open(CV, '_blank')}
-          >
-            <p>Download CV</p>
-            <svg
-              className='ml-2'
-              stroke='currentColor'
-              fill='none'
-              strokeWidth='2'
-              viewBox='0 0 24 24'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              height='20'
-              width='20'
-              xmlns='http://www.w3.org/2000/svg'
+          <div className='flex flex-wrap items-center gap-4 mt-6'>
+            <Button
+              styling={`${buttonStyle} bg-blue/20 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-white dark:hover:bg-light300`}
+              click={() => window.open(CV, '_blank')}
             >
-              <path d='M12 2v8'></path>
-              <path d='m16 6-4 4-4-4'></path>
-              <rect
+              <p>Download CV</p>
+
+              <svg
+                stroke='currentColor'
+                fill='none'
+                strokeWidth='2'
+                viewBox='0 0 24 24'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                height='20'
                 width='20'
-                height='8'
-                x='2'
-                y='14'
-                rx='2'
-              ></rect>
-              <path d='M6 18h.01'></path>
-              <path d='M10 18h.01'></path>
-            </svg>
-          </Button>
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M12 2v8'></path>
+                <path d='m16 6-4 4-4-4'></path>
+
+                <rect
+                  width='20'
+                  height='8'
+                  x='2'
+                  y='14'
+                  rx='2'
+                ></rect>
+
+                <path d='M6 18h.01'></path>
+                <path d='M10 18h.01'></path>
+              </svg>
+            </Button>
+
+            <Button
+              styling={`${buttonStyle} border border-gray-300 bg-white text-gray-700 hover:bg-gray-900 hover:text-white dark:border-dark600 dark:bg-dark300 dark:text-dark700 dark:hover:bg-dark600`}
+              click={() => window.open('https://github.com/syifasukmaa', '_blank')}
+            >
+              <BsGithub className='text-xl' />
+              <p>Github</p>
+            </Button>
+          </div>
         </motion.div>
 
-        <div className='relative flex items-center justify-center mt-5 md:mt-0'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false }}
+          transition={{ duration: 0.7, amount: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className='relative flex items-center justify-center mt-5 md:mt-0'
+        >
           <svg
             viewBox='0 0 100 100'
             xmlns='http://www.w3.org/2000/svg'
@@ -164,7 +194,7 @@ function Home() {
             alt='Syifa'
             className='relative z-10 w-80 md:w-[380px] lg:w-[500px] -mt-20 md:-mt-36 lg:-mt-44'
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

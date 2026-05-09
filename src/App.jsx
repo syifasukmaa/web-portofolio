@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Home from './components/organisms/Home';
-import About from './components/organisms/About';
 // import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
 import Navbar from './components/organisms/Navbar';
@@ -9,7 +8,7 @@ import Stack from './components/organisms/Stack';
 import { Link } from 'react-scroll';
 import Certification from './components/organisms/Certification';
 import Resume from './components/organisms/Resume';
-import { FaArrowAltCircleUp, FaArrowUp } from 'react-icons/fa';
+import { FaArrowUp } from 'react-icons/fa';
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -31,12 +30,10 @@ function App() {
       <div className='relative w-full dark:bg-dark100'>
         <Navbar />
         <Home />
-        <About />
         <Resume />
         <Stack />
         <Project />
         <Certification />
-        {/* <Contact /> */}
         <Footer />
         <Link
           to='home'
