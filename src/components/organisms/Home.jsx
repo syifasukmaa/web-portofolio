@@ -3,8 +3,41 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { slideIn } from '../../utils/motion';
 import { BsGithub } from 'react-icons/bs';
+import { FaGitAlt, FaReact } from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss } from 'react-icons/si';
+import FloatingBadge from '../atoms/FloatingBadge';
 
 function Home() {
+  const floatingBadges = [
+    {
+      icon: <FaReact className='text-cyan-400 text-xl' />,
+      label: 'React JS',
+      // posisi: kiri atas foto
+      className: 'top-[5%] left-[-10%]',
+      delay: 0,
+      duration: 3,
+      distance: -14,
+    },
+    {
+      icon: <FaGitAlt className='text-orange-500 text-xl' />,
+      label: 'Git',
+      // posisi: kanan bawah foto
+      className: 'bottom-[15%] right-[-12%]',
+      delay: 0.8,
+      duration: 3.5,
+      distance: -12,
+    },
+    {
+      icon: <SiJavascript className='text-yellow-400 text-xl' />,
+      label: 'JavaScript',
+      // posisi: kanan atas foto
+      className: 'top-[10%] right-[-14%]',
+      delay: 1.5,
+      duration: 2.8,
+      distance: -16,
+    },
+  ];
+
   const buttonStyle =
     'rounded-xl flex items-center justify-center gap-2 py-3 px-6 font-semibold transition-all duration-300 hover:-translate-y-1';
   const CV = 'https://drive.google.com/file/d/1dwvVCvxlGdHtxHIdVdb0fihSXGDSiQoB/view?usp=sharing';
@@ -98,6 +131,12 @@ function Home() {
           }}
           className='relative flex items-center justify-center mt-5 md:mt-0'
         >
+          {floatingBadges.map((badge, i) => (
+            <FloatingBadge
+              key={i}
+              {...badge}
+            />
+          ))}
           <svg
             viewBox='0 0 100 100'
             xmlns='http://www.w3.org/2000/svg'

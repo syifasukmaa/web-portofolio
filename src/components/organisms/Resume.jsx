@@ -25,7 +25,7 @@ export default function Resume() {
             whileInView='show'
             className='flex-col w-5/6 md:w-1/2'
           >
-            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Education's</p>
+            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Education</p>
             <EducationList />
           </motion.div>
 
@@ -35,7 +35,8 @@ export default function Resume() {
             whileInView='show'
             className='w-5/6 md:ml-10 mt-28 md:mt-0 md:w-1/2'
           >
-            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Work's</p>
+            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Work</p>
+
             <CertficationResumeList />
           </motion.div>
         </div>
