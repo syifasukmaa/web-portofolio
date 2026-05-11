@@ -1,3 +1,4 @@
+import { FaBabyCarriage, FaGraduationCap, FaShoppingBag } from 'react-icons/fa';
 import { slideIn } from '../../utils/motion';
 import CertficationResumeList from '../molecules/CertficationResumeList';
 import EducationList from '../molecules/EducationList';
@@ -25,7 +26,12 @@ export default function Resume() {
             whileInView='show'
             className='flex-col w-5/6 md:w-1/2'
           >
-            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Education</p>
+            <div className='flex items-center gap-2 ml-24 mb-5'>
+              <div className='w-10 h-10 bg-blue/10 flex items-center justify-center rounded-xl'>
+                <FaGraduationCap className='text-blue text-2xl' />
+              </div>
+              <p className='text-xl text-left font-medium text-dark100 dark:text-dark700'>Education</p>
+            </div>
             <EducationList />
           </motion.div>
 
@@ -35,7 +41,12 @@ export default function Resume() {
             whileInView='show'
             className='w-5/6 md:ml-10 mt-28 md:mt-0 md:w-1/2'
           >
-            <p className='text-2xl text-left text-dark100 dark:text-dark700'>Work</p>
+            <div className='flex items-center gap-2 ml-24 mb-5'>
+              <div className='w-10 h-10 bg-primary100/10 flex items-center justify-center rounded-xl'>
+                <FaShoppingBag className='text-primary100 text-2xl' />
+              </div>
+              <p className='text-xl text-left font-medium text-dark100 dark:text-dark700'>Work</p>
+            </div>
 
             <CertficationResumeList />
           </motion.div>

@@ -22,16 +22,21 @@ export const galleryContainerVariant = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.8,
     },
   },
 };
 
 export const galleryVariant = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 50, opacity: 0 },
   show: {
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
   },
 };
 export const fadeInUp = {

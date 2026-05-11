@@ -6,6 +6,7 @@ import Button from '../atoms/Button';
 import StackItem from '../molecules/StackItem';
 import { IoSettingsSharp } from 'react-icons/io5';
 import { FaTools } from 'react-icons/fa';
+import { galleryContainerVariant } from '../../utils/motion';
 
 function Stack() {
   const [stack, setStack] = useState(true);
@@ -46,14 +47,10 @@ function Stack() {
           </Button>
         </div>
         <motion.div
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: false }}
-          transition={{ duration: 0.7, amount: 0.7 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+          key={stack ? 'stack' : 'tools'}
+          variants={galleryContainerVariant}
+          initial={'hidden'}
+          animate={'show'}
           className='grid w-full grid-cols-3 gap-8 mt-10 md:grid-cols-4 lg:grid-cols-6 justify-items-center md:gap-y-8'
         >
           {stack ? <StackItem data={iconStack} /> : <StackItem data={iconTools} />}
