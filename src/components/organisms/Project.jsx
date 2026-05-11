@@ -25,7 +25,7 @@ function Project() {
             className={`px-4 py-2  transition rounded-lg shadow-lg hover:shadow-xl ${
               visible
                 ? 'bg-dark200/30 text-dark200 dark:text-dark700 dark:bg-darkk400 hover:bg-darkk400'
-                : 'bg-blue/30 text-blue hover:bg-blue hover:text-white'
+                : 'bg-blue/10 text-blue hover:bg-blue hover:text-white'
             }`}
             onClick={handleVisible}
           >

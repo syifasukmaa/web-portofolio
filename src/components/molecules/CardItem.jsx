@@ -1,7 +1,3 @@
-// import { BsLink45Deg, BsGithub } from 'react-icons/bs';
-// import CardItemBody from '../atoms/CardItemBody';
-// import PrevButton from '../atoms/PrevButton';
-// import CodeButton from '../atoms/CodeButton';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 import { galleryVariant } from '../../utils/motion';
@@ -16,6 +12,8 @@ const CardItem = ({ project }) => {
     >
       <img
         src={project.imgUrl}
+        width={1200}
+        height={700}
         alt={project.name}
         className='object-cover w-full rounded-lg group-hover:transition-transform '
       />

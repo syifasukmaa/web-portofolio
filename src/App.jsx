@@ -70,12 +70,14 @@ function App() {
           }}
         />
 
-        <Navbar />
-        <Home />
-        <Resume />
-        <Stack />
-        <Project />
-        <Certification />
+        <main>
+          <Navbar />
+          <Home />
+          <Resume />
+          <Stack />
+          <Project />
+          <Certification />
+        </main>
         <Footer />
         <Link
           to='home'

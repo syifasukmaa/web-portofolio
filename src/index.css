@@ -10,3 +10,6 @@
 .gradient-secondary {
   @apply bg-gradient-to-r from-blue to-purple;
 }
+html {
+  scroll-behavior: smooth;
+}

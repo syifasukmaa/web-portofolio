@@ -6,7 +6,8 @@ export default {
     extend: {
       colors: {
         greys: '#666',
-        blue: '#13b0f5',
+        // blue: '#13b0f5',
+        blue: '#02a5eb5',
         darkBlue: '#0284c7',
         purple: '#e70faa',
         ygPurple: '#42446E',

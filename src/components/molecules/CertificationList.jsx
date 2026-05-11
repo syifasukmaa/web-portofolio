@@ -23,6 +23,8 @@ export default function CertificationList({ certifacates }) {
               <img
                 src={certificate.image}
                 alt={certificate.desc}
+                width={1200}
+                height={800}
                 className='w-full bg-cover rounded-md cursor-pointer'
                 onClick={() => setModalImage(certificate.image)}
               />

@@ -27,9 +27,9 @@ function Stack() {
             Technologies I’ve been working with recently
           </p>
         </div>
-        <div className='flex justify-center mt-6 text-center text-white'>
+        <div className='flex justify-center mt-6 text-center'>
           <Button
-            styling={`${stack ? 'bg-blue' : 'bg-dark600'} bg-blue py-2 px-4 mr-2 rounded-lg flex items-center`}
+            styling={`${stack ? 'bg-blue' : 'bg-dark600'} bg-blue py-2 px-4 mr-2 text-white rounded-lg flex items-center`}
             click={handleStack}
           >
             <IoSettingsSharp className='mr-2 text-xl' />
@@ -38,7 +38,7 @@ function Stack() {
           <Button
             styling={`${
               stack ? 'bg-dark600' : 'bg-blue'
-            } bg-blue py-2 px-4 mr-2 rounded-lg min-w-[110px]  flex items-center`}
+            } bg-blue py-2 px-4 mr-2 rounded-lg min-w-[110px]  flex items-center text-white`}
             click={handleStack}
           >
             <FaTools className='mr-2 text-xl' />

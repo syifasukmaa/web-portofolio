@@ -78,7 +78,7 @@ function Home() {
           {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
           <div className='flex flex-wrap items-center gap-4 mt-6'>
             <Button
-              styling={`${buttonStyle} bg-blue/20 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-white dark:hover:bg-light300`}
+              styling={`${buttonStyle} bg-blue/10 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-white dark:hover:bg-light300`}
               click={() => window.open(CV, '_blank')}
             >
               <p>Download CV</p>
@@ -231,6 +231,8 @@ function Home() {
           <img
             src='/img/sipa.png'
             alt='Syifa'
+            width={700}
+            height={900}
             className='relative z-10 w-80 md:w-[380px] lg:w-[500px] -mt-20 md:-mt-36 lg:-mt-44'
           />
         </motion.div>
