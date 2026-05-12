@@ -17,7 +17,7 @@ function FloatingBadge({ icon, label, className, delay, duration, distance }) {
       }}
     >
       {icon}
-      <span className='text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap'>{label}</span>
+      <span className='text-sm font-medium text-gray-700 dark:text-ygPurple whitespace-nowrap'>{label}</span>
     </motion.div>
   );
 }

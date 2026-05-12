@@ -54,9 +54,13 @@ function Home() {
           className='w-full md:max-w-[45%] lg:max-w-[50%]'
         >
           <div className='text-xl font-bold font-poppins lg:text-4xl md:text-3xl '>
-            <p className='mb-2 lg:mb-6 text-ygPurple dark:text-primary100'>Hi👋</p>
+            {/* <p className='mb-2 lg:mb-6 text-ygPurple dark:text-primary100'></p> */}
+            <div className='flex items-center gap-2 bg-ygPurple/10 w-fit px-3 py-1 rounded-full mb-6 dark:bg-dark600 dark:text-dark700'>
+              <div className='w-3 h-3 rounded-full bg-green-500 dark:bg-green-300 animate-pulse'></div>
+              <p className='text-ygPurple dark:text-primary100 font-semibold text-sm'>Open To Work</p>
+            </div>
             <p className='mb-4 text-ygPurple dark:text-primary100'>
-              My name is
+              Hi, my name is
               <span className='text-transparent gradient-secondary bg-clip-text'> Syifa Sukma</span>
             </p>
             <p className='mb-2 text-ygPurple dark:text-primary100'>I am a</p>
@@ -78,7 +82,7 @@ function Home() {
           {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
           <div className='flex flex-wrap items-center gap-4 mt-6'>
             <Button
-              styling={`${buttonStyle} bg-blue/10 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-white dark:hover:bg-light300`}
+              styling={`${buttonStyle} bg-blue/10 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-dark600 dark:hover:bg-dark600`}
               click={() => window.open(CV, '_blank')}
             >
               <p>Download CV</p>

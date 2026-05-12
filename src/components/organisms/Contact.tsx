@@ -63,7 +63,7 @@ function Contact() {
           </a>
 
           <a href='https://www.linkedin.com/in/syifasukma/'>
-            <div className='bg-white dark:bg-dark200 dark:border-gray-600 rounded-xl py-5 px-5 shadow-lg dark:shadow-md dark:shadow-dark300/80'>
+            <div className='bg-white dark:bg-dark200 dark:border-gray-600 rounded-xl py-5 px-5 shadow-lg dark:shadow-md dark:shadow-dark300/80 cursor-pointer hover:scale-105 transition-all ease-in-out duration-300'>
               <div className='flex flex-col items-center '>
                 <div className='bg-blue/10 dark:bg-blue/10 rounded-lg p-3 w-fit'>
                   <FaLinkedin className=' text-lg text-blue' />
