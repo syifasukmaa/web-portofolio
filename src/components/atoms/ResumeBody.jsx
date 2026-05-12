@@ -6,7 +6,7 @@ export default function ResumeBody({ title, desc, year, work }) {
           className={`z-30 flex flex-col w-6 h-6 mt-4 border-4 rounded-full ${work ? 'bg-primary100 dark:bg-primary100' : 'dark:bg-blue dark:border-darkBlue bg-darkBlue border-blue'}  group-hover:bg-purple`}
         ></span>
         <span
-          className={`flex flex-col w-10 h-[6px] mt-4 -ml-1 ${work ? 'bg-primary100' : 'bg-blue'} z-10 dark:bg-darkBlue`}
+          className={`flex flex-col w-10 h-[6px] mt-4 -ml-1 ${work ? 'bg-primary100 dark:bg-primary100' : 'bg-blue'} z-10`}
         ></span>
       </div>
       <p className={`flex items-center mt-1 mb-1 text-sm ${work ? 'text-primary100' : 'text-blue'}`}>

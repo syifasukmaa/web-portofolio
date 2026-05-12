@@ -11,6 +11,7 @@ import Resume from './components/organisms/Resume';
 import { FaArrowUp } from 'react-icons/fa';
 import { useMotionValue, useSpring } from 'framer-motion';
 import { motion } from 'framer-motion';
+import Contact from './components/organisms/Contact';
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -77,6 +78,7 @@ function App() {
           <Stack />
           <Project />
           <Certification />
+          <Contact />
         </main>
         <Footer />
         <Link

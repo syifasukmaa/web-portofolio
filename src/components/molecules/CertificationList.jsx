@@ -17,7 +17,7 @@ export default function CertificationList({ certifacates }) {
           <motion.div
             variants={galleryVariant}
             key={certificate.id}
-            className='w-full transition-all duration-500 ease-in-out bg-white rounded-lg shadow-lg hover:z-10 dark:bg-dark300 shadow-blue/25 drop-shadow-lg hover:scale-110'
+            className='w-full rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-xl shadow-black/10 transition-all duration-500 ease-in-out hover:scale-105 hover:border-blue/30 hover:shadow-blue/20 dark:bg-white/ dark:border-white/10 overflow-hidden'
           >
             <div className='z-20 w-full px-5 py-5 overflow-hidden transition-allhover:relative hover:z-50'>
               <img

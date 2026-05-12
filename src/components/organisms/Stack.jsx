@@ -50,7 +50,8 @@ function Stack() {
           key={stack ? 'stack' : 'tools'}
           variants={galleryContainerVariant}
           initial={'hidden'}
-          animate={'show'}
+          whileInView={'show'}
+          viewport={{ once: true }}
           className='grid w-full grid-cols-3 gap-8 mt-10 md:grid-cols-4 lg:grid-cols-6 justify-items-center md:gap-y-8'
         >
           {stack ? <StackItem data={iconStack} /> : <StackItem data={iconTools} />}

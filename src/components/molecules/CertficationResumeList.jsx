@@ -5,7 +5,7 @@ export default function CertficationResumeList() {
   return (
     <div className='relative top-4 md:left-2'>
       <div className='relative'>
-        <div className='absolute left-[38px] top-2 bottom-6 w-[6px] rounded-md bg-primary100 dark:bg-primary100'></div>
+        <div className='absolute left-[42px] top-2 bottom-6 w-[6px] rounded-md bg-primary100 dark:bg-primary100'></div>
 
         <div className='relative grid w-full grid-cols-1 gap-8 pl-[90px]'>
           {Work.map((sertifications) => (
