@@ -37,18 +37,18 @@ const Navbar = () => {
           ${
             colorChange
               ? `
+          
               lg:px-8
                 lg:py-3
                 lg:rounded-full
-                lg:bg-white/70
                 lg:dark:bg-dark300/70
                 lg:backdrop-blur-lg
                 lg:shadow-lg
                 lg:border
                 lg:border-gray-200
-                lg:dark:border-dark600
+                lg:dark:border-dark600 
               `
-              : 'lg:py-3'
+              : 'py-3 lg:py-3'
           }
         `}
       >
@@ -58,7 +58,7 @@ const Navbar = () => {
             w-[100%] mx-auto lg:w-[75%] px-10 lg:px-0
             transition-all duration-500
 
-            ${colorChange ? 'md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 bg-white lg:bg-transparent dark:bg-transparent ' : 'py-3 lg:py-0'}
+            ${colorChange ? 'md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 lg:bg-transparent dark:bg-transparent bg-gradient-to-br from-white/40 to-white/10 lg:from-transparent lg:to-transparent dark:from-dark300/40 dark:to-dark300/10 backdrop-blur-md backdrop-saturate-150 border border-white/20 shadow-xl lg:shadow-none lg:border-none ' : 'py-3 lg:py-0'}
           `}
         >
           <img

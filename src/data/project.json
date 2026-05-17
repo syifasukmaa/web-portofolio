@@ -38,7 +38,7 @@
     "desc": "Preducation adalah platform kursus online yang menghadirkan berbagai materi tentang teknologi digital, seperti pengembangan Android, pemrograman, dan topik menarik lainnya. Website ini dirancang dengan Next JS dan TailwindCSS untuk memberikan performa cepat dan tampilan modern. Dengan integrasi SWR, data selalu diperbarui secara real-time sehingga pengguna mendapatkan pengalaman belajar yang interaktif. Preducation juga terhubung dengan aplikasi Android untuk memudahkan akses belajar di mana saja.",
     "github": "https://github.com/syifasukmaa/preducation-frontend.git",
     "preview": "https://preducation.vercel.app/",
-    "stack": ["Next JS", "TailwindCSS, SWR"],
+    "stack": ["Next JS", "TailwindCSS", "SWR"],
     "imgUrl": "/img/preducation.png",
     "gallery": ["/img/preducation.png", "/img/preducation-2.png", "/img/preducation-3.png"],
     "process": "Done"

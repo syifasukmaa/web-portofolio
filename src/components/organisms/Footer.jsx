@@ -61,7 +61,7 @@ function Footer() {
 
     <footer
       id='contact'
-      className='w-full flex justify-between items-center lg:px-40 px-8 pb-5 py-4 font-poppins bg-ygBlue dark:bg-dark200 border-t border-t-gray-500'
+      className='w-full flex justify-between items-center lg:px-40 px-8 pb-5 py-4 font-poppins bg-ygBlue dark:bg-dark200 border-t border-t-gray-300 dark:border-t-gray-500'
     >
       <p className='text-blue dark:text-white text-sm'>© 2026 Syifa Sukma Ramadhani. All rights reserved.</p>
       <div>

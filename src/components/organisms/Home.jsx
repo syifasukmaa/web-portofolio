@@ -55,7 +55,7 @@ function Home() {
         >
           <div className='text-xl font-bold font-poppins lg:text-4xl md:text-3xl '>
             {/* <p className='mb-2 lg:mb-6 text-ygPurple dark:text-primary100'></p> */}
-            <div className='flex items-center gap-2 bg-ygPurple/10 w-fit px-3 py-1 rounded-full mb-6 dark:bg-dark600 dark:text-dark700'>
+            <div className='flex items-center mx-auto md:ml-0 justify-start gap-2 bg-ygPurple/10 w-fit px-3 py-1 rounded-full mb-6 dark:bg-dark600 dark:text-dark700'>
               <div className='w-3 h-3 rounded-full bg-green-500 dark:bg-green-300 animate-pulse'></div>
               <p className='text-ygPurple dark:text-primary100 font-semibold text-sm'>Open To Work</p>
             </div>
