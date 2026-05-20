@@ -34,10 +34,8 @@ const Navbar = () => {
         className={`
           transition-all duration-500
 
-          ${
-            colorChange
-              ? `
-          
+          ${colorChange
+            ? `
               lg:px-8
                 lg:py-3
                 lg:rounded-full
@@ -48,7 +46,7 @@ const Navbar = () => {
                 lg:border-gray-200
                 lg:dark:border-dark600 
               `
-              : 'py-3 lg:py-3'
+            : 'py-3 lg:py-3'
           }
         `}
       >
@@ -58,7 +56,10 @@ const Navbar = () => {
             w-[100%] mx-auto lg:w-[75%] px-10 lg:px-0
             transition-all duration-500
 
-            ${colorChange ? 'md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 lg:bg-transparent dark:bg-transparent bg-gradient-to-br from-white/40 to-white/10 lg:from-transparent lg:to-transparent dark:from-dark300/40 dark:to-dark300/10 backdrop-blur-md backdrop-saturate-150 border border-white/20 shadow-xl lg:shadow-none lg:border-none ' : 'py-3 lg:py-0'}
+           ${colorChange
+              ? 'md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 bg-gradient-to-br from-white/40 to-white/10 dark:bg-dark300/80 backdrop-blur-md border border-white/20 dark:border-dark600 shadow-xl lg:shadow-none lg:border-none dark:bg-none lg:bg-none lg:dark:bg-none'
+              : 'py-3 lg:py-0 bg-white/80 dark:bg-dark200/80 backdrop-blur-md lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none'
+            }
           `}
         >
           <img
@@ -94,10 +95,10 @@ const Navbar = () => {
               className='
                 flex flex-col items-center gap-5
                 rounded-2xl
-                bg-white dark:bg-dark300
+                bg-white dark:bg-dark300 lg:dark:none
                 border border-gray-200 dark:border-dark600
                 shadow-xl
-                p-5
+                p-5 lg:hidden
               '
             >
               {linkNav.map((link) => (
@@ -113,7 +114,7 @@ const Navbar = () => {
           </div>
 
           {/* DESKTOP MENU */}
-          <nav className='hidden lg:flex items-center gap-8'>
+          <nav className='hidden lg:flex items-center gap-8 lg:bg-none lg:dark:bg-none'>
             {linkNav.map((link) => (
               <LinkScroll
                 key={link.id}
