@@ -58,7 +58,6 @@ const CardItem = ({ project, index }) => {
       transition={{ duration: 0.4, delay, ease: 'easeOut' }}
 
     >
-      {/* Thumbnail */}
       <div className='relative overflow-hidden h-44'>
         <img
           src={project.imgUrl}
@@ -67,16 +66,17 @@ const CardItem = ({ project, index }) => {
           alt={project.name}
           className='object-cover w-full h-full transition-transform duration-300 hover:scale-105'
         />
-
-        {/* Status dot */}
         <span
-          className={`absolute top-3 right-3 w-2.5 h-2.5 rounded-full border-2 border-white/60 ${isDone ? 'bg-green-400' : 'bg-amber-400'
+          className={`absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-semibold shadow-lg ${isDone
+            ? 'bg-green-500/90 text-white'
+            : 'bg-amber-500/90 text-white'
             }`}
-          title={project.process}
-        />
+        >
+          <span className={`w-1.5 h-1.5 rounded-full bg-white animate-pulse`} />
+          {isDone ? 'Done' : 'On Progress'}
+        </span>
       </div>
 
-      {/* Body */}
       <div className='flex flex-col flex-1 gap-2 p-4'>
         <h3 className='text-base font-bold text-greys dark:text-dark600'>
           {project.name}
@@ -86,7 +86,6 @@ const CardItem = ({ project, index }) => {
           {project.desc}
         </p>
 
-        {/* Stack chips */}
         <div className='flex flex-wrap gap-1.5 mt-1'>
           {project.stack.map((tech, i) => {
             const color = getStackColor(tech);
@@ -105,8 +104,6 @@ const CardItem = ({ project, index }) => {
           })}
         </div>
       </div>
-
-      {/* Footer — selalu visible, tidak pakai hover */}
       <div className='flex gap-2 p-4 pt-0'>
         <a
           href={project.preview}
