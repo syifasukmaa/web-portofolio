@@ -7,21 +7,25 @@
         "preview": "https://shani-indira.vercel.app/",
         "stack": ["Next JS", "TailwindCSS", "Zustand", "Swiper JS"],
         "imgUrl": "/img/personal-blog.png",
-        "gallery": ["/img/personal-blog.png", "/img/personal-blog-2.png", "/img/personal-blog-3.png"],
+        "gallery": [
+            "/img/personal-blog.png",
+            "/img/personal-blog-2.png",
+            "/img/personal-blog-3.png"
+        ],
         "process": "Done",
         "year": 2024
     },
     {
-        "id": 3,
-        "name": "Savedueet Apps",
-        "desc": "Savedueet adalah aplikasi pengelolaan keuangan berbasis web yang memudahkan pengguna mencatat pemasukan dan pengeluaran sehari-hari. Dibangun dengan React JS dan Bootstrap, aplikasi ini memiliki tampilan sederhana namun fungsional, sehingga cocok untuk siapa saja yang ingin lebih disiplin dalam mengatur keuangan pribadi. Savedueet membantu mencatat setiap transaksi dan memberikan gambaran ringkas arus keuangan agar pengguna dapat mengontrol pengeluaran dengan lebih baik.",
-        "github": "https://github.com/syifasukmaa/savedueet",
-        "preview": "https://savedueet.vercel.app/",
-        "stack": ["React JS", "Bootstrap"],
-        "imgUrl": "/img/savedueet.png",
-        "gallery": ["/img/savedueet.png", "/img/savedueet-2.png", "/img/savedueet-3.png"],
+        "id": 1,
+        "name": "Quran Web App",
+        "desc": "Website untuk membaca Al-Quran yang dilengkapi dengan fitur pencarian surah, terjemahan, dan tafsir. Serta terdapat jadwal sholat pada masing-masing kota. Dibangun dengan Vue.JS, Typescript dan TailwindCSS. website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi",
+        "gihtub": "https://github.com/syifasukmaa/quran-web",
+        "preview": "https://quranandoa.netlify.app",
+        "stack": ["Vue.JS", "Typescript", "TailwindCSS"],
+        "imgUrl": "/img/quranapp.png",
+        "gallery": ["/img/quranapp1.png", "/img/quranapp2.png", "/img/quranapp3.png"],
         "process": "Done",
-        "year": 2023
+        "year": 2026
     },
     {
         "id": 5,
@@ -46,6 +50,18 @@
         "gallery": ["/img/notes.png", "/img/notes-2.png", "/img/notes-3.png"],
         "process": "Done",
         "year": 2024
+    },
+    {
+        "id": 3,
+        "name": "Savedueet Apps",
+        "desc": "Savedueet adalah aplikasi pengelolaan keuangan berbasis web yang memudahkan pengguna mencatat pemasukan dan pengeluaran sehari-hari. Dibangun dengan React JS dan Bootstrap, aplikasi ini memiliki tampilan sederhana namun fungsional, sehingga cocok untuk siapa saja yang ingin lebih disiplin dalam mengatur keuangan pribadi. Savedueet membantu mencatat setiap transaksi dan memberikan gambaran ringkas arus keuangan agar pengguna dapat mengontrol pengeluaran dengan lebih baik.",
+        "github": "https://github.com/syifasukmaa/savedueet",
+        "preview": "https://savedueet.vercel.app/",
+        "stack": ["React JS", "Bootstrap"],
+        "imgUrl": "/img/savedueet.png",
+        "gallery": ["/img/savedueet.png", "/img/savedueet-2.png", "/img/savedueet-3.png"],
+        "process": "Done",
+        "year": 2023
     },
     {
         "id": 8,
