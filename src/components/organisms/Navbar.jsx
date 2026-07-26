@@ -37,6 +37,7 @@ const Navbar = () => {
           ${
               colorChange
                   ? `
+                  
               lg:px-8
                 lg:py-3
                 lg:rounded-full
@@ -47,7 +48,7 @@ const Navbar = () => {
                 lg:border-gray-200
                 lg:dark:border-dark600 
               `
-                  : "py-3 lg:py-3"
+                  : "py-0 lg:py-3"
           }
         `}
             >
@@ -56,7 +57,6 @@ const Navbar = () => {
             flex items-center justify-between
             w-[100%] mx-auto lg:w-[75%] px-10 lg:px-0
             transition-all duration-500
-
            ${
                colorChange
                    ? "md:w-auto lg:justify-center md:gap-8 py-3 lg:py-0 bg-gradient-to-br from-white/40 to-white/10 dark:bg-dark300/80 backdrop-blur-md border border-white/20 dark:border-dark600 shadow-xl lg:shadow-none lg:border-none lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:from-transparent lg:to-transparent"
@@ -79,29 +79,28 @@ const Navbar = () => {
                         <div className="lg:hidden">
                             <ToggleSwitch />
                         </div>
-                        <Button styling="block lg:hidden" click={() => setIsNavOpen((prev) => !prev)}>
-                            {isNavOpen ? <BsXLg className="text-3xl dark:text-dark600" /> : <RxHamburgerMenu className="text-3xl dark:text-dark600" />}
+                        <Button
+                            styling="block lg:hidden"
+                            click={() => setIsNavOpen((prev) => !prev)}
+                        >
+                            {isNavOpen ? (
+                                <BsXLg className="text-3xl dark:text-dark600" />
+                            ) : (
+                                <RxHamburgerMenu className="text-3xl dark:text-dark600" />
+                            )}
                         </Button>
                     </div>
 
                     <div
-                        className={`
-              absolute top-20 right-5 w-[220px]
-              transition-all duration-300 lg:hidden ${isNavOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-5"}
-            `}
+                        className={`absolute top-20 right-5 w-[220px] transition-all duration-300 lg:hidden ${isNavOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-5"}`}
                     >
-                        <nav
-                            className="
-                flex flex-col items-center gap-5
-                rounded-2xl
-                bg-white dark:bg-dark300 lg:dark:none
-                border border-gray-200 dark:border-dark600
-                shadow-xl
-                p-5 lg:hidden
-              "
-                        >
+                        <nav className="flex flex-col items-center gap-5 rounded-2xl bg-white dark:bg-dark300 lg:dark:none border border-gray-200 dark:border-dark600 shadow-xl p-5 lg:hidden">
                             {linkNav.map((link) => (
-                                <LinkScroll key={link.id} title={link.title} styling="dark:text-dark600 capitalize" />
+                                <LinkScroll
+                                    key={link.id}
+                                    title={link.title}
+                                    styling="dark:text-dark600 capitalize"
+                                />
                             ))}
 
                             <div className="lg:flex hidden">
@@ -112,7 +111,11 @@ const Navbar = () => {
 
                     <nav className="hidden lg:flex items-center gap-8 lg:bg-none lg:dark:bg-none">
                         {linkNav.map((link) => (
-                            <LinkScroll key={link.id} title={link.title} styling="dark:text-dark600 capitalize" />
+                            <LinkScroll
+                                key={link.id}
+                                title={link.title}
+                                styling="dark:text-dark600 capitalize"
+                            />
                         ))}
 
                         <ToggleSwitch />
