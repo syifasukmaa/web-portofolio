@@ -4,16 +4,12 @@
     "title": "home"
   },
   {
-    "id": 3,
-    "title": "resume"
-  },
-  {
-    "id": 4,
-    "title": "stack"
-  },
-  {
     "id": 5,
     "title": "project"
+  },
+  {
+    "id": 3,
+    "title": "resume"
   },
   {
     "id": 6,
