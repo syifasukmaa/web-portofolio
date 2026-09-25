@@ -5,12 +5,12 @@ import Navbar from "./components/organisms/Navbar";
 import Project from "./components/organisms/Project";
 import { Link } from "react-scroll";
 import Certification from "./components/organisms/Certification";
-import Resume from "./components/organisms/Resume";
 import { FaArrowUp } from "react-icons/fa";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion";
 import Contact from "./components/organisms/Contact";
 import StackMarquee from "./components/molecules/StackMarque";
+import Resume from "./components/organisms/Resume";
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -18,7 +18,6 @@ function App() {
   const rawX = useMotionValue(-400);
   const rawY = useMotionValue(-400);
 
-  // Spring biar gerakannya smooth & ada efek lag
   const x = useSpring(rawX, { stiffness: 80, damping: 10 });
   const y = useSpring(rawY, { stiffness: 80, damping: 10 });
 

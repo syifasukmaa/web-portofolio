@@ -1,14 +1,33 @@
 [
   {
     "id": 1,
-    "title": "System Implementator",
-    "company": "PT Erahajj Group International",
-    "year": "August 2025 - December 2025"
+    "title": "Teaching Assistant",
+    "company": "STT Terpadu Nurul Fikri",
+    "year": "September 2023 - February 2024",
+    "details": [
+      "Taught 150 students in auditorium sessions on the Odoo application across 4 modules, one session per week for one semester.",
+      "Helped students resolve application errors, handling an average of 3–4 case studies per session."
+    ]
   },
   {
     "id": 2,
-    "title": "Front-End Web Developer",
-    "company": "PT Super Multi Bisnis Internasional",
-    "year": "December 2025 - Present"
+    "title": "System Implementator",
+    "company": "PT Erahajj Group Indonesia",
+    "year": "August 2025 - December 2025",
+    "details": [
+      "Managed and maintained retention of 54 travel agency clients through routine invoice billing and technical support for system usage.",
+      "Performed fixes and customizations on client website appearances using jQuery and CSS, completing display change requests for 2–3 clients per week."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Frontend Developer",
+    "company": "PT Super Multibisnis International",
+    "year": "December 2025 - Present",
+    "details": [
+      "Developed a multirole admin dashboard (5 access roles/levels) using React (Vite), TypeScript, Tailwind CSS, and TanStack Query to support merchant and driver verification and activation processes.",
+      "Optimized application performance through state management and data caching (TanStack Query), reducing data loading time to 41ms.",
+      "Designed and integrated APIs for the driver subscription renewal page using React, TanStack Query, and TanStack Router."
+    ]
   }
 ]
