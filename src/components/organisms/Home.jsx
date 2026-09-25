@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
 import { BsGithub } from "react-icons/bs";
 import { FaGitAlt, FaReact } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
 import FloatingBadge from "../atoms/FloatingBadge";
-import StackMarquee from "../molecules/StackMarque";
+import { useState } from "react";
 
 function Home() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const floatingBadges = [
     {
       icon: <FaReact className="text-cyan-400 text-xl" />,
@@ -210,12 +211,22 @@ function Home() {
               />
             </svg>
 
+            {!imageLoaded && (
+              <div className="absolute z-10 w-80 md:w-[380px] lg:w-[500px] aspect-square -mt-20 md:-mt-36 lg:-mt-44 rounded-full bg-gray-200 dark:bg-dark400 animate-pulse" />
+            )}
+
             <img
               src="/img/sipa.png"
               alt="Syifa"
               width={700}
               height={900}
-              className="relative z-10 w-80 md:w-[380px] lg:w-[500px] -mt-20 md:-mt-36 lg:-mt-44"
+              loading="eager"
+              onLoad={() => setImageLoaded(true)}
+              className={`
+                relative z-10 w-80 md:w-[380px] lg:w-[500px] -mt-20 md:-mt-36 lg:-mt-44
+                transition-opacity duration-700 ease-out
+                ${imageLoaded ? "opacity-100" : "opacity-0"}
+              `}
             />
           </motion.div>
         </div>
