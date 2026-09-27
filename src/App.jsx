@@ -13,6 +13,7 @@ import StackMarquee from "./components/molecules/StackMarque";
 import Resume from "./components/organisms/Resume";
 import { AnimatePresence } from "framer-motion";
 import LoadingScreen from "./components/molecules/LoadingScreen";
+import Article from "./components/organisms/Article";
 
 function App() {
   const [colorChange, setColorChange] = useState(true);
@@ -84,6 +85,7 @@ function App() {
             <Project />
             <Resume />
             <Certification />
+            <Article />
             <Contact />
           </main>
           <Footer />
