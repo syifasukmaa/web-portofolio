@@ -12,46 +12,7 @@ function ProjectDetail() {
   const [modalImage, setModalImage] = useState(null);
   const navigate = useNavigate();
 
-  const techColors = {
-    'React JS': '#61dafb',
-    React: '#61dafb',
-    'Vue JS': '#42b883',
-    Vue: '#42b883',
-    'Next JS': '#000000',
-    'Next.js': '#000000',
-    Bootstrap: '#7952b3',
-    TailwindCSS: '#38bdf8',
-    Tailwind: '#38bdf8',
-    JavaScript: '#f7df1e',
-    TypeScript: '#3178c6',
-    'Node JS': '#68a063',
-    Laravel: '#ff2d20',
-    PHP: '#8892bf',
-    MySQL: '#4479a1',
-    MongoDB: '#47a248',
-    Firebase: '#ffca28',
-    Supabase: '#3ecf8e',
-    Vite: '#646cff',
-    Redux: '#764abc',
-    'Framer Motion': '#0055ff',
-    Figma: '#f24e1e',
-    Git: '#f05032',
-    sass: '#cc6699',
-    nodejs: '#68a063',
-    'node js': '#68a063',
-    nodej: '#68a063',
-    webpack: '#8dd6f9',
-    tailwindcss: '#38bdf8', // tanpa spasi
-    swr: '#000000',
-    blade: '#ff2d20',
-    'swiper js': '#0080ff',
-    zustand: '#8b5cf6',
-  };
 
-  const getColor = (tech) => {
-    const key = Object.keys(techColors).find((k) => k.toLowerCase() === tech.toLowerCase());
-    return key ? techColors[key] : '#888888';
-  };
   return (
     <div className='min-h-screen px-6 py-1 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark100 dark:to-dark200 lg:px-16'>
       <div className='flex items-center justify-between'>
@@ -100,120 +61,100 @@ function ProjectDetail() {
 
         {/* RIGHT SIDE */}
         <div className='flex flex-col justify-center'>
-          <h1 className='mb-4 text-3xl font-bold text-blue dark:text-darkBlue'>{project.name}</h1>
-          <p className='mb-4 text-gray-700 dark:text-dark600'>{project.desc}</p>
+          <h1 className='mb-4 text-3xl font-bold font-jetbrains text-slate-900 dark:text-zinc-100'>{project.name}</h1>
+          <p className='mb-6 leading-relaxed text-slate-600 dark:text-zinc-400 font-light'>{project.desc}</p>
 
-          <div className='mb-4'>
-            <div className='flex'>
-              <div className='flex flex-col items-start w-fit pr-5'>
-                <p className='text-md font-semibold dark:text-dark600'>Progress</p>
+          <div className='mb-6'>
+            <div className='flex items-center gap-6'>
+              <div className='flex flex-col items-start'>
+                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Status</p>
                 <span
-                  className={`text-sm px-3 py-1 mt-1  font-medium flex items-center gap-2 ${
+                  className={`text-xs px-3 py-1 mt-1.5 font-medium inline-flex items-center gap-1.5 rounded-full ${
                     project.process === 'Done'
-                      ? 'text-green-500 bg-green-500/20 dark:bg-green-500/50'
-                      : 'text-red-600 bg-red-600/20'
-                  } rounded-full w-fit dark:text-dark700`}
+                      ? 'text-emerald-700 bg-emerald-50 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-500/20'
+                      : 'text-amber-700 bg-amber-50 dark:bg-amber-500/10 dark:text-amber-400 border border-amber-200/80 dark:border-amber-500/20'
+                  }`}
                 >
-                  <div className='w-2 h-2 bg-current rounded-full'></div>
-                  {project.process}
+                  <div className={`w-1.5 h-1.5 rounded-full ${project.process === 'Done' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
+                  {project.process === 'Done' ? 'Completed' : 'In Progress'}
                 </span>
               </div>
-              <div className='flex flex-col items-start border-x border-dark300 px-3 w-fit'>
-                <p className='text-md font-semibold dark:text-dark600'>Tahun</p>
-                <span
-                  className={`text-sm py-1 mt-1 font-medium flex items-center gap-2 rounded-full w-fit dark:text-dark700`}
-                >
-                  2025
+              <div className='flex flex-col items-start border-x border-slate-200 dark:border-zinc-700/80 px-6'>
+                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Year</p>
+                <span className='text-sm mt-1.5 font-medium text-slate-700 dark:text-zinc-300 font-jetbrains'>
+                  {project.year || 2024}
                 </span>
               </div>
-              <div className='flex flex-col items-start px-3 w-fit'>
-                <p className='text-md font-semibold dark:text-dark600'>Tipe</p>
-                <span
-                  className={`text-sm py-1 mt-1 font-medium flex items-center gap-2  rounded-full w-fit dark:text-dark700`}
-                >
-                  Website
+              <div className='flex flex-col items-start'>
+                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Type</p>
+                <span className='text-sm mt-1.5 font-medium text-slate-700 dark:text-zinc-300 font-jetbrains'>
+                  Web App
                 </span>
               </div>
             </div>
           </div>
-          <div className='mb-8'>
-            <h3 className='mb-3 text-lg font-semibold dark:text-dark600'>🛠️ Tech Stack</h3>
-            <div className='flex flex-wrap gap-4'>
-              {/* {project.stack.map((tech, index) => (
+
+          <div className='mb-6'>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Tech Stack</h3>
+            <div className='flex flex-wrap gap-2'>
+              {project.stack.map((tech, index) => (
                 <div
                   key={index}
-                  className='flex items-center gap-2 px-5 py-1.5 text-sm font-medium border shadow-md bg-white/70 dark:bg-dark300/70 backdrop-blur border-white/30 dark:border-dark300 rounded-xl'
+                  className='flex items-center gap-2 px-3 py-1 text-xs font-medium border border-slate-200/80 dark:border-zinc-700/60 shadow-sm bg-slate-50/80 dark:bg-zinc-800/80 text-slate-700 dark:text-zinc-300 rounded-lg transition-transform hover:scale-105'
                 >
-                  <div className='w-2 h-2 bg-current rounded-full'></div>
-                  <span className='text-sm dark:text-dark700'>{tech}</span>
+                  <div className='w-1.5 h-1.5 rounded-full bg-indigo-500/80 dark:bg-indigo-400' />
+                  <span>{tech}</span>
                 </div>
-              ))} */}
-
-              {project.stack.map((tech, index) => {
-                const color = getColor(tech);
-                return (
-                  <div
-                    key={index}
-                    className='flex items-center gap-2 px-4 py-1.5 text-sm font-medium border shadow-md bg-white/70 dark:bg-dark300/70 backdrop-blur rounded-xl transition-transform hover:scale-105'
-                    style={{ borderColor: color + '66' }}
-                  >
-                    <div
-                      className='w-2 h-2 rounded-full flex-shrink-0'
-                      style={{
-                        background: color,
-                        boxShadow: `0 0 6px ${color}99`,
-                      }}
-                    />
-                    <span className='text-sm dark:text-dark700'>{tech}</span>
-                  </div>
-                );
-              })}
+              ))}
             </div>
           </div>
-          <div className='mb-2'>
-            <h3 className='text-lg font-semibold dark:text-dark600'>📌 Key Features</h3>
-            <div className='w-full max-w-md '>
-              <ul className='text-dark200 dark:text-dark700'>
-                <li className='text-base leading-7 flex items-center gap-2'>
-                  <FaMobile /> Responsive Design
+
+          <div className='mb-4'>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Key Highlights</h3>
+            <div className='w-full max-w-md'>
+              <ul className='space-y-2 text-slate-700 dark:text-zinc-300 text-sm'>
+                <li className='flex items-center gap-2.5'>
+                  <FaMobile className='text-indigo-500' /> Fully Responsive Design
                 </li>
-                <li className='text-base leading-7 flex items-center gap-2'>
-                  <FaMoon /> Dark Mode
+                <li className='flex items-center gap-2.5'>
+                  <FaMoon className='text-indigo-500' /> Dark & Light Mode Support
                 </li>
-                <li className='text-base leading-7 flex items-center gap-2'>
-                  <FaBolt /> Fast Performance
+                <li className='flex items-center gap-2.5'>
+                  <FaBolt className='text-indigo-500' /> Optimized Performance & UX
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className='flex gap-4 mt-4'>
+          <div className='flex items-center gap-3 pt-4 mt-2 border-t border-slate-100 dark:border-zinc-800/80'>
             <a
               href={project.preview}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex px-4 py-2 font-medium transition border rounded-lg shadow-lg bg-blue/30 text-blue border-blue/30 hover:bg-blue hover:text-white dark:bg-darkBlue/30 dark:text-dark700 dark:border-darkBlue/30 dark:hover:bg-darkBlue dark:hover:text-white'
+              className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white transition-all rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white shadow-sm hover:shadow active:scale-95'
             >
               <img
                 src='/img/stack/preview.svg'
                 alt='icon preview'
-                className='mr-1 text-primary100 dark:invert'
+                className='w-3.5 h-3.5 invert dark:invert-0'
               />
-              Live View
+              Live Demo
             </a>
-            <a
-              href={project.github}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center px-4 py-2 font-medium transition border rounded-lg shadow bg-greys/30 text-greys border-greys/30 hover:bg-greys hover:text-white dark:bg-dark600/30 dark:text-dark700 dark:border-primary100/20 dark:hover:bg-dark600 dark:hover:text-white'
-            >
-              <img
-                src='/img/stack/github2.svg'
-                alt='icon preview'
-                className='mr-1 text-primary100 dark:invert'
-              />
-              <p>View Code</p>
-            </a>
+            {(project.github || project.gihtub) && (
+              <a
+                href={project.github || project.gihtub}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium transition-all border rounded-xl text-slate-700 dark:text-zinc-300 border-slate-200 dark:border-zinc-700/80 hover:bg-slate-100/70 dark:hover:bg-zinc-800/80 active:scale-95'
+              >
+                <img
+                  src='/img/stack/github2.svg'
+                  alt='icon github'
+                  className='w-3.5 h-3.5 dark:invert'
+                />
+                View Code
+              </a>
+            )}
           </div>
         </div>
       </motion.div>

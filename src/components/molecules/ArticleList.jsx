@@ -100,13 +100,12 @@ export default function ArticleList({ articles }) {
       </motion.div>
 
       {hasMore && (
-        <div className="mt-10 flex justify-center">
+        <div className="flex items-center justify-center mt-16">
           <button
-            type="button"
+            className="px-6 py-2.5 transition-all duration-300 rounded-xl text-sm font-medium border border-darkBlue/40 text-darkBlue hover:bg-darkBlue hover:text-white dark:border-primary400/40 dark:text-primary400 dark:hover:bg-primary100/20 active:scale-95"
             onClick={handleLoadMore}
-            className="rounded-lg bg-blue/10 px-4 py-2 text-blue shadow-lg transition hover:bg-blue hover:text-white hover:shadow-xl dark:bg-darkBlue/10 dark:text-darkBlue dark:hover:bg-darkBlue dark:hover:text-white"
           >
-            Show More
+            Show More Article
           </button>
         </div>
       )}

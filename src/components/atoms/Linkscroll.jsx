@@ -1,5 +1,3 @@
-import { Link } from "react-scroll";
-
 const LinkScroll = (props) => {
   const { title, styling, isActive } = props;
 

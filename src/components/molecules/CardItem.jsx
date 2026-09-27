@@ -1,113 +1,97 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import { galleryVariant } from "../../utils/motion";
-
-const stackColors = {
-    "react js": "#61dafb",
-    react: "#61dafb",
-    "next js": "#000000",
-    "next.js": "#000000",
-    "vue js": "#42b883",
-    vue: "#42b883",
-    bootstrap: "#7952b3",
-    tailwindcss: "#38bdf8",
-    "tailwind css": "#38bdf8",
-    tailwind: "#38bdf8",
-    javascript: "#f7df1e",
-    typescript: "#3178c6",
-    sass: "#cc6699",
-    nodejs: "#68a063",
-    "node js": "#68a063",
-    webpack: "#8dd6f9",
-    swr: "#555555",
-    zustand: "#8b5cf6",
-    "swiper js": "#0080ff",
-    laravel: "#ff2d20",
-    blade: "#ef4444",
-    firebase: "#ffca28",
-    supabase: "#3ecf8e",
-    vite: "#646cff",
-    redux: "#764abc",
-    figma: "#f24e1e",
-    git: "#f05032",
-    mysql: "#4479a1",
-    mongodb: "#47a248",
-};
-
-const getStackColor = (tech) => {
-    const key = Object.keys(stackColors).find((k) => k.toLowerCase() === tech.toLowerCase());
-    return key ? stackColors[key] : "#888888";
-};
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 
 const CardItem = ({ project, index }) => {
-    const isDone = project.process === "Done";
+  const isDone = project.process === "Done";
+  const githubUrl = project.github || project.gihtub;
+  const isReverse = index % 2 === 1;
 
-    const colIndex = index % 3;
-    const delay = colIndex * 0.12;
-
-    return (
-        <motion.div
-            className="flex flex-col overflow-hidden transition-transform duration-200 border rounded-2xl bg-white/80 dark:bg-dark200/80 border-white/20 dark:border-dark300 backdrop-blur-sm hover:-translate-y-1 active:scale-[0.98]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ duration: 0.4, delay, ease: "easeOut" }}
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
+      className={`flex flex-col ${
+        isReverse ? "md:flex-row-reverse" : "md:flex-row"
+      } items-center gap-8 lg:gap-14`}
+    >
+      <div className="relative w-full md:w-[52%] lg:w-[50%] overflow-hidden rounded-2xl border border-gray-200/80 dark:border-dark300 shadow-md shadow-gray-200/50 dark:shadow-none bg-gray-100 dark:bg-dark200 group">
+        <a
+          href={project.preview}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block relative overflow-hidden aspect-[16/10] w-full"
         >
-            <div className="relative overflow-hidden h-44">
-                <img src={project.imgUrl} width={1200} height={700} alt={project.name} className="object-cover w-full h-full transition-transform duration-300 hover:scale-105" />
-                <span
-                    className={`absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-semibold shadow-lg ${
-                        isDone ? "bg-green-500/90 text-white" : "bg-amber-500/90 text-white"
-                    }`}
-                >
-                    <span className={`w-1.5 h-1.5 rounded-full bg-white animate-pulse`} />
-                    {isDone ? "Done" : "On Progress"}
-                </span>
-            </div>
+          <img
+            src={project.imgUrl}
+            alt={project.name}
+            className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+        </a>
+      </div>
 
-            <div className="flex flex-col flex-1 gap-2 p-4">
-                <h3 className="text-base font-bold text-greys dark:text-dark600">{project.name}</h3>
+      <div className="w-full md:w-[48%] lg:w-[50%] flex flex-col justify-center">
+        <div className="flex items-center gap-2.5 text-xs font-jetbrains text-darkBlue dark:text-primary400 font-semibold tracking-wider uppercase mb-2">
+          <span className="text-base">{project.year || 2024}</span>
+        </div>
 
-                <p className="text-sm font-light leading-relaxed text-gray-500 dark:text-dark500 line-clamp-2">{project.desc}</p>
+        <h4 className="text-xl md:text-2xl font-bold font-jetbrains text-ygPurple dark:text-dark700 hover:text-darkBlue dark:hover:text-primary100 transition-colors">
+          <Link to={`/projects/${project.id}`}>{project.name}</Link>
+        </h4>
 
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                    {project.stack.map((tech, i) => {
-                        const color = getStackColor(tech);
-                        return (
-                            <span
-                                key={i}
-                                className="text-[10px] px-2 py-0.5 rounded-full border font-medium"
-                                style={{
-                                    borderColor: color + "55",
-                                    color: color !== "#888888" ? color : undefined,
-                                }}
-                            >
-                                {tech}
-                            </span>
-                        );
-                    })}
-                </div>
-            </div>
-            <div className="flex gap-2 p-4 pt-0">
-                <a
-                    href={project.preview}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center flex-1 gap-1.5 py-2 text-xs font-medium text-white transition rounded-xl bg-blue dark:bg-darkBlue hover:opacity-90 active:scale-95"
-                >
-                    <img src="/img/stack/preview.svg" alt="" className="w-3.5 h-3.5 dark:invert" />
-                    Live Demo
-                </a>
+        <p className="mt-3 text-sm md:text-base font-light text-greys dark:text-dark600 leading-relaxed line-clamp-3">
+          {project.desc}
+        </p>
 
-                <Link
-                    to={`/projects/${project.id}`}
-                    className="flex items-center justify-center flex-1 gap-1.5 py-2 text-xs font-medium transition border rounded-xl text-greys dark:text-dark600 border-dark300 dark:border-dark400 hover:bg-gray-100 dark:hover:bg-dark300 active:scale-95"
-                >
-                    More Detail
-                </Link>
-            </div>
-        </motion.div>
-    );
+        <div className="flex flex-wrap gap-2 my-4">
+          {project.stack.map((tech, i) => (
+            <span
+              key={i}
+              className="text-xs px-2.5 py-1 rounded-lg font-jetbrains bg-gray-100/90 dark:bg-dark300/60 text-greys dark:text-dark700 border border-gray-200/60 dark:border-dark300/80"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4 pt-2">
+          <a
+            href={project.preview}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-darkBlue dark:text-primary400 hover:underline active:scale-95 transition-all group/link"
+          >
+            <span>Live Preview</span>
+            <FiArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+          </a>
+
+          <Link
+            to={`/projects/${project.id}`}
+            className="inline-flex items-center gap-1 text-sm font-medium text-greys dark:text-dark600 hover:text-ygPurple dark:hover:text-dark700 transition-colors"
+          >
+            <span>Details</span>
+            <span>→</span>
+          </Link>
+
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View source code on GitHub"
+              className="p-1.5 text-greys border rounded-full dark:text-dark600 hover:text-ygPurple dark:hover:text-dark700 transition-colors ml-auto"
+              title="GitHub Repository"
+            >
+              <FiGithub className="w-4 h-4" />
+            </a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
 export default CardItem;

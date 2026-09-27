@@ -1,17 +1,10 @@
-import { galleryContainerVariant } from '../../utils/motion';
-import CardItem from './CardItem';
+import CardItem from "./CardItem";
 
 function CardList({ projects }) {
   return (
-    <div
-      className='grid w-full gap-5 mt-10 rounded-lg md:grid-cols-2 xl:grid-cols-3'
-    >
+    <div className="flex flex-col gap-16 md:gap-24 mt-14 md:mt-20">
       {projects.map((project, index) => (
-        <CardItem
-          key={project.id}
-          project={project}
-          index={index}
-        />
+        <CardItem key={project.id} project={project} index={index} />
       ))}
     </div>
   );
