@@ -71,8 +71,8 @@ function App() {
               translateY: "-50%",
               background: `radial-gradient(
               circle,
-              rgba(99, 102, 241, 0.2) 0%,
-              rgba(139, 92, 246, 0.08) 40%,
+              rgba(44, 122, 158, 0.16) 0%,
+              rgba(96, 125, 139, 0.06) 40%,
               transparent 70%
               )`,
             }}

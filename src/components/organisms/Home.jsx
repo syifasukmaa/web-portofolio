@@ -76,7 +76,7 @@ function Home() {
               />
             </div>
             <div className="text-start">
-              <p className="pt-2 text-md text-ygPurple dark:text-dark600 mt-3">
+              <p className="pt-2 text-md font-light text-ygPurple dark:text-dark600 mt-3">
                 {" "}
                 Fresh Graudate information systems majoring. I have a great
                 interest in the IT industry, especially in the fields of web
@@ -152,8 +152,8 @@ function Home() {
                   y2="0%"
                   gradientTransform="rotate(45 0.5 0.5)"
                 >
-                  <stop offset="0%" stopColor="#4F46E5" />
-                  <stop offset="100%" stopColor="#FF7AF9" />
+                  <stop offset="0%" stopColor="#2B8EC9" />
+                  <stop offset="100%" stopColor="#B0BEC5" />
                 </linearGradient>
               </defs>
 
@@ -176,8 +176,8 @@ function Home() {
                   y2="0%"
                   gradientTransform="rotate(45 0.5 0.5)"
                 >
-                  <stop offset="0%" stopColor="#4F46E5" />
-                  <stop offset="100%" stopColor="#FF7AF9" />
+                  <stop offset="0%" stopColor="#2B8EC9" />
+                  <stop offset="100%" stopColor="#B0BEC5" />
                 </linearGradient>
               </defs>
 
@@ -200,8 +200,8 @@ function Home() {
                   y2="0%"
                   gradientTransform="rotate(45 0.5 0.5)"
                 >
-                  <stop offset="0%" stopColor="#4F46E5" />
-                  <stop offset="100%" stopColor="#FF7AF9" />
+                  <stop offset="0%" stopColor="#2B8EC9" />
+                  <stop offset="100%" stopColor="#B0BEC5" />
                 </linearGradient>
               </defs>
 

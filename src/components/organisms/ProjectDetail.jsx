@@ -53,7 +53,7 @@ function ProjectDetail() {
                 alt={`Detail ${index}`}
                 onClick={() => setModalImage(img)}
                 className={`object-cover w-24 h-24  transition border rounded-xl shadow cursor-pointer 
-    hover:scale-105 ${modalImage === img ? 'ring-2 ring-blue-500' : 'border-white/20'}`}
+    hover:scale-105 ${modalImage === img ? 'ring-2 ring-blue' : 'border-blueGrey-200 dark:border-dark300'}`}
               />
             ))}
           </div>
@@ -61,13 +61,13 @@ function ProjectDetail() {
 
         {/* RIGHT SIDE */}
         <div className='flex flex-col justify-center'>
-          <h1 className='mb-4 text-3xl font-bold font-jetbrains text-slate-900 dark:text-zinc-100'>{project.name}</h1>
-          <p className='mb-6 leading-relaxed text-slate-600 dark:text-zinc-400 font-light'>{project.desc}</p>
+          <h1 className='mb-4 text-3xl font-bold font-jetbrains text-ygPurple dark:text-dark700'>{project.name}</h1>
+          <p className='mb-6 leading-relaxed text-greys dark:text-dark600 font-light'>{project.desc}</p>
 
           <div className='mb-6'>
             <div className='flex items-center gap-6'>
               <div className='flex flex-col items-start'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Status</p>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Status</p>
                 <span
                   className={`text-xs px-3 py-1 mt-1.5 font-medium inline-flex items-center gap-1.5 rounded-full ${
                     project.process === 'Done'
@@ -79,15 +79,15 @@ function ProjectDetail() {
                   {project.process === 'Done' ? 'Completed' : 'In Progress'}
                 </span>
               </div>
-              <div className='flex flex-col items-start border-x border-slate-200 dark:border-zinc-700/80 px-6'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Year</p>
-                <span className='text-sm mt-1.5 font-medium text-slate-700 dark:text-zinc-300 font-jetbrains'>
+              <div className='flex flex-col items-start border-x border-blueGrey-200 dark:border-dark400 px-6'>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Year</p>
+                <span className='text-sm mt-1.5 font-medium text-ygPurple dark:text-dark700 font-jetbrains'>
                   {project.year || 2024}
                 </span>
               </div>
               <div className='flex flex-col items-start'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Type</p>
-                <span className='text-sm mt-1.5 font-medium text-slate-700 dark:text-zinc-300 font-jetbrains'>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Type</p>
+                <span className='text-sm mt-1.5 font-medium text-ygPurple dark:text-dark700 font-jetbrains'>
                   Web App
                 </span>
               </div>
@@ -95,14 +95,14 @@ function ProjectDetail() {
           </div>
 
           <div className='mb-6'>
-            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Tech Stack</h3>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Tech Stack</h3>
             <div className='flex flex-wrap gap-2'>
               {project.stack.map((tech, index) => (
                 <div
                   key={index}
-                  className='flex items-center gap-2 px-3 py-1 text-xs font-medium border border-slate-200/80 dark:border-zinc-700/60 shadow-sm bg-slate-50/80 dark:bg-zinc-800/80 text-slate-700 dark:text-zinc-300 rounded-lg transition-transform hover:scale-105'
+                  className='flex items-center gap-2 px-3 py-1 text-xs font-medium border border-blueGrey-200 dark:border-dark400 shadow-sm bg-ygBlue dark:bg-dark300 text-ygPurple dark:text-dark700 rounded-lg transition-transform hover:scale-105'
                 >
-                  <div className='w-1.5 h-1.5 rounded-full bg-indigo-500/80 dark:bg-indigo-400' />
+                  <div className='w-1.5 h-1.5 rounded-full bg-blue' />
                   <span>{tech}</span>
                 </div>
               ))}
@@ -110,33 +110,33 @@ function ProjectDetail() {
           </div>
 
           <div className='mb-4'>
-            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-slate-400 dark:text-zinc-500 font-jetbrains'>Key Highlights</h3>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Key Highlights</h3>
             <div className='w-full max-w-md'>
-              <ul className='space-y-2 text-slate-700 dark:text-zinc-300 text-sm'>
+              <ul className='space-y-2 text-ygPurple dark:text-dark700 text-sm'>
                 <li className='flex items-center gap-2.5'>
-                  <FaMobile className='text-indigo-500' /> Fully Responsive Design
+                  <FaMobile className='text-blue' /> Fully Responsive Design
                 </li>
                 <li className='flex items-center gap-2.5'>
-                  <FaMoon className='text-indigo-500' /> Dark & Light Mode Support
+                  <FaMoon className='text-blue' /> Dark & Light Mode Support
                 </li>
                 <li className='flex items-center gap-2.5'>
-                  <FaBolt className='text-indigo-500' /> Optimized Performance & UX
+                  <FaBolt className='text-blue' /> Optimized Performance & UX
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className='flex items-center gap-3 pt-4 mt-2 border-t border-slate-100 dark:border-zinc-800/80'>
+          <div className='flex items-center gap-3 pt-4 mt-2 border-t border-blueGrey-100 dark:border-dark300'>
             <a
               href={project.preview}
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white transition-all rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white shadow-sm hover:shadow active:scale-95'
+              className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white transition-all rounded-xl bg-blue hover:bg-darkBlue shadow-sm hover:shadow active:scale-95'
             >
               <img
                 src='/img/stack/preview.svg'
                 alt='icon preview'
-                className='w-3.5 h-3.5 invert dark:invert-0'
+                className='w-3.5 h-3.5 invert'
               />
               Live Demo
             </a>
@@ -145,7 +145,7 @@ function ProjectDetail() {
                 href={project.github || project.gihtub}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium transition-all border rounded-xl text-slate-700 dark:text-zinc-300 border-slate-200 dark:border-zinc-700/80 hover:bg-slate-100/70 dark:hover:bg-zinc-800/80 active:scale-95'
+                className='inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium transition-all border rounded-xl text-ygPurple dark:text-dark700 border-blueGrey-200 dark:border-dark400 hover:bg-ygBlue dark:hover:bg-dark300 active:scale-95'
               >
                 <img
                   src='/img/stack/github2.svg'

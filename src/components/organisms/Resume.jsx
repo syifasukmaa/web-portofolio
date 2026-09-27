@@ -40,7 +40,7 @@ export default function Resume() {
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span
-                      className={`text-2xl md:text-3xl transition-colors text-blue ${
+                      className={`text-2xl md:text-3xl transition-colors font-jetbrains text-blue ${
                         isOpen
                           ? "font-bold text-blue  dark:text-primary100 hover:text-darkBlue"
                           : "font-medium text-gray-400 dark:text-dark700 hover:text-blue"
