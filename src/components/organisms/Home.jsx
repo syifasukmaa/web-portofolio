@@ -7,9 +7,11 @@ import { FaGitAlt, FaReact } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import FloatingBadge from "../atoms/FloatingBadge";
 import { useState } from "react";
+import { useTranslation } from "../../context/LanguageContext";
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { t, lang } = useTranslation();
   const floatingBadges = [
     {
       icon: <FaReact className="text-cyan-400 text-xl" />,
@@ -52,22 +54,24 @@ function Home() {
             className="w-full md:max-w-[45%] lg:max-w-[50%]"
           >
             <div className=" text-xl font-bold font-poppins lg:text-4xl md:text-3xl ">
-              <p className="font-jetbrains  mb-4 text-ygPurple dark:text-primary100">
-                Hi, my name is
+              <p className="font-jetbrains mb-4 text-ygPurple dark:text-primary100">
+                {t("hero.greeting")}{" "}
                 <span className="font-jetbrains text-transparent gradient-secondary bg-clip-text">
-                  {" "}
                   Syifa Sukma
                 </span>
               </p>
               <p className="font-jetbrains mb-2 text-ygPurple dark:text-primary100">
-                I am a
+                {t("hero.rolePrefix")}
               </p>
               <TypeAnimation
-                className="text-transparent gradient-secondary bg-clip-text font-jetbrains "
+                key={lang}
+                className="text-transparent gradient-secondary bg-clip-text font-jetbrains"
                 sequence={[
                   " Front End Web Developer",
                   2000,
-                  "Customer Service",
+                  " Customer Service",
+                  2000,
+                  lang === "id" ? " Antusias UI/UX" : " UI/UX Enthusiast",
                   2000,
                 ]}
                 wrapper="span"
@@ -76,11 +80,8 @@ function Home() {
               />
             </div>
             <div className="text-start">
-              <p className="pt-2 text-md font-light text-ygPurple dark:text-dark600 mt-3">
-                {" "}
-                Fresh Graudate information systems majoring. I have a great
-                interest in the IT industry, especially in the fields of web
-                development and data management (administration).
+              <p className="pt-2 text-md font-light text-ygPurple dark:text-dark600 mt-3 leading-relaxed">
+                {t("hero.description")}
               </p>
             </div>
             {/* tambahin button untuk sosial media (instagram, linkedin, github) */}
@@ -89,7 +90,7 @@ function Home() {
                 styling={`${buttonStyle} bg-blue/10 text-blue hover:bg-blue hover:text-white dark:bg-blue/30 dark:text-white dark:hover:bg-dark600`}
                 click={() => window.open(CV, "_blank")}
               >
-                <p>Download CV</p>
+                <p>{t("hero.downloadCv")}</p>
 
                 <svg
                   stroke="currentColor"

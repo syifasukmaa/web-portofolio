@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { useTranslation } from "../../context/LanguageContext";
 
 const CardItem = ({ project, index }) => {
+  const { t } = useTranslation();
   const isDone = project.process === "Done";
   const githubUrl = project.github || project.gihtub;
   const isReverse = index % 2 === 1;
@@ -64,7 +66,7 @@ const CardItem = ({ project, index }) => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-darkBlue dark:text-primary400 hover:underline active:scale-95 transition-all group/link"
           >
-            <span>Live Preview</span>
+            <span>{t("projects.livePreview")}</span>
             <FiArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
           </a>
 
@@ -72,7 +74,7 @@ const CardItem = ({ project, index }) => {
             to={`/projects/${project.id}`}
             className="inline-flex items-center gap-1 text-sm font-medium text-greys dark:text-dark600 hover:text-ygPurple dark:hover:text-dark700 transition-colors"
           >
-            <span>Details</span>
+            <span>{t("projects.details")}</span>
             <span>→</span>
           </Link>
 

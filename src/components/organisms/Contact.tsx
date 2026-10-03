@@ -5,7 +5,11 @@ import {
   containerVariant,
   galleryContainerVariant,
 } from "../../utils/motion";
+import { useTranslation } from "../../context/LanguageContext";
+
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="w-full py-28 md:pt-18 font-poppins ">
       <motion.div
@@ -17,12 +21,10 @@ function Contact() {
       >
         <div className="text-center">
           <h3 className="text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 font-jetbrains">
-            Contact
+            {t("contact.title")}
           </h3>
-          <p className="pt-2 font-light text-greys md:text-xl dark:text-primary400 dark:font-normal">
-            I'm open to full-time roles, freelance work, and interesting
-            collaborations. if you're looking to hire or collaborate - let's
-            talk
+          <p className="pt-2 font-light text-greys md:text-xl dark:text-primary400 dark:font-normal max-w-2xl mx-auto">
+            {t("contact.subtitle")}
           </p>
         </div>
 

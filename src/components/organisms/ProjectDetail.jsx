@@ -5,29 +5,34 @@ import { useState } from 'react';
 import { fadeIn, fadeInUp, zoomIn } from '../../utils/motion';
 import { FaAngleRight, FaBolt, FaMobile, FaMoon } from 'react-icons/fa';
 import ToggleSwitch from '../molecules/ToggleSwitch';
+import LanguageSwitch from '../molecules/LanguageSwitch';
+import { useTranslation } from '../../context/LanguageContext';
 
 function ProjectDetail() {
   const { id } = useParams();
   const project = allProject.find((project) => project.id.toString() === id);
   const [modalImage, setModalImage] = useState(null);
   const navigate = useNavigate();
-
+  const { t } = useTranslation();
 
   return (
     <div className='min-h-screen px-6 py-1 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark100 dark:to-dark200 lg:px-16'>
       <div className='flex items-center justify-between'>
         {/* button back */}
-        <div className='flex items-center justify-start mt-10 mb-10 dark:text-dark600'>
+        <div className='flex items-center justify-start mt-10 mb-10 dark:text-dark600 font-jetbrains'>
           <button
             onClick={() => navigate('/')}
-            className='py-2 mx-4 transition text-dark200 hover:text-dark600 dark:text-dark600'
+            className='py-2 px-3 rounded-lg transition text-dark200 hover:text-blue dark:text-dark600 dark:hover:text-primary100'
           >
-            Home
+            {t("detail.back")}
           </button>
-          <FaAngleRight className='mr-2 dark:text-dark600' /> Detail Project
+          <FaAngleRight className='mr-2 dark:text-dark600' /> {t("detail.breadcrumb")}
         </div>
 
-        <ToggleSwitch />
+        <div className='flex items-center gap-3'>
+          <LanguageSwitch />
+          <ToggleSwitch />
+        </div>
       </div>
 
       <motion.div
@@ -67,7 +72,7 @@ function ProjectDetail() {
           <div className='mb-6'>
             <div className='flex items-center gap-6'>
               <div className='flex flex-col items-start'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Status</p>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>{t("detail.status")}</p>
                 <span
                   className={`text-xs px-3 py-1 mt-1.5 font-medium inline-flex items-center gap-1.5 rounded-full ${
                     project.process === 'Done'
@@ -76,17 +81,17 @@ function ProjectDetail() {
                   }`}
                 >
                   <div className={`w-1.5 h-1.5 rounded-full ${project.process === 'Done' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
-                  {project.process === 'Done' ? 'Completed' : 'In Progress'}
+                  {project.process === 'Done' ? t("projects.completed") : t("projects.inProgress")}
                 </span>
               </div>
               <div className='flex flex-col items-start border-x border-blueGrey-200 dark:border-dark400 px-6'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Year</p>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>{t("detail.year")}</p>
                 <span className='text-sm mt-1.5 font-medium text-ygPurple dark:text-dark700 font-jetbrains'>
                   {project.year || 2024}
                 </span>
               </div>
               <div className='flex flex-col items-start'>
-                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Type</p>
+                <p className='text-xs font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>{t("detail.type")}</p>
                 <span className='text-sm mt-1.5 font-medium text-ygPurple dark:text-dark700 font-jetbrains'>
                   Web App
                 </span>
@@ -95,7 +100,7 @@ function ProjectDetail() {
           </div>
 
           <div className='mb-6'>
-            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Tech Stack</h3>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>{t("detail.techStack")}</h3>
             <div className='flex flex-wrap gap-2'>
               {project.stack.map((tech, index) => (
                 <div
@@ -110,17 +115,17 @@ function ProjectDetail() {
           </div>
 
           <div className='mb-4'>
-            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>Key Highlights</h3>
+            <h3 className='mb-3 text-sm font-semibold tracking-wider uppercase text-blueGrey-400 dark:text-dark600 font-jetbrains'>{t("detail.highlights")}</h3>
             <div className='w-full max-w-md'>
               <ul className='space-y-2 text-ygPurple dark:text-dark700 text-sm'>
                 <li className='flex items-center gap-2.5'>
-                  <FaMobile className='text-blue' /> Fully Responsive Design
+                  <FaMobile className='text-blue' /> {t("detail.responsive")}
                 </li>
                 <li className='flex items-center gap-2.5'>
-                  <FaMoon className='text-blue' /> Dark & Light Mode Support
+                  <FaMoon className='text-blue' /> {t("detail.darkLight")}
                 </li>
                 <li className='flex items-center gap-2.5'>
-                  <FaBolt className='text-blue' /> Optimized Performance & UX
+                  <FaBolt className='text-blue' /> {t("detail.performance")}
                 </li>
               </ul>
             </div>
@@ -138,7 +143,7 @@ function ProjectDetail() {
                 alt='icon preview'
                 className='w-3.5 h-3.5 invert'
               />
-              Live Demo
+              {t("detail.liveDemo")}
             </a>
             {(project.github || project.gihtub) && (
               <a
@@ -152,7 +157,7 @@ function ProjectDetail() {
                   alt='icon github'
                   className='w-3.5 h-3.5 dark:invert'
                 />
-                View Code
+                {t("detail.viewCode")}
               </a>
             )}
           </div>

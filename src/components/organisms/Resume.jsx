@@ -1,8 +1,10 @@
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import WorkExperience from "../../data/work.json";
 import { useState } from "react";
+import { useTranslation } from "../../context/LanguageContext";
 
 export default function Resume() {
+  const { t } = useTranslation();
   const sortedData = [...WorkExperience].reverse();
 
   const defaultOpenId =
@@ -22,10 +24,10 @@ export default function Resume() {
       <div className="w-[100%] px-8 mx-auto lg:w-[75%]">
         <div className="text-center">
           <h3 className="text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 font-jetbrains">
-            Resume
+            {t("resume.title")}
           </h3>
           <p className="pt-2 font-light text-greys md:text-xl dark:text-primary400 dark:font-normal">
-            A Years Of Experience
+            {t("resume.subtitle")}
           </p>
         </div>
         <div className="flex flex-col divide-y divide-gray-200 dark:divide-dark400 mt-10">

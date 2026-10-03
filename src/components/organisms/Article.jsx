@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import ArticleList from "../molecules/ArticleList";
 import { getMediumArticles } from "../../services/services";
+import { useTranslation } from "../../context/LanguageContext";
 
 export default function Article() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -22,7 +24,7 @@ export default function Article() {
   }, []);
 
   if (loading) {
-    return <p>Loading articles...</p>;
+    return <p className="text-center py-10 font-jetbrains text-greys dark:text-dark600">Loading articles...</p>;
   }
 
   return (
@@ -33,11 +35,11 @@ export default function Article() {
       <div className="w-[90%] mx-auto lg:w-[75%]">
         <div className="text-center">
           <h3 className="text-2xl font-extrabold text-greys md:text-3xl dark:text-primary100 font-jetbrains">
-            Articles
+            {t("article.title")}
           </h3>
 
           <p className="pt-2 font-light text-greys md:text-xl dark:text-primary400 dark:font-normal">
-            My Thoughts and Experiences
+            {t("article.subtitle")}
           </p>
         </div>
 

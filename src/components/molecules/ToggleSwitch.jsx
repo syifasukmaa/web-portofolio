@@ -15,15 +15,16 @@ export default function ToggleSwitch() {
   };
 
   return (
-    <div className="py-2 mx-4 md:mx-4">
+    <div className="flex items-center">
       <button
-        className={`flex items-center justify-center w-10 h-10 p-2  transition-all duration-300  rounded-fulwl dark:bg-dark300 hover:scale-105 ${darkSide ? "dark:bg-gray-300/10" : "bg-primary100/10"}`}
+        aria-label="Toggle dark mode"
+        className={`flex items-center justify-center w-9 h-9 p-2 transition-all duration-300 rounded-full dark:bg-dark300 hover:scale-105 border border-blueGrey-200 dark:border-dark400 ${darkSide ? "dark:bg-gray-300/10" : "bg-primary100/30"}`}
         onClick={() => toggleDarkMode(!darkSide)}
       >
         {darkSide ? (
-          <MdOutlineDarkMode className="text-2xl text-gray-300" />
+          <MdOutlineDarkMode className="text-xl text-gray-300" />
         ) : (
-          <MdOutlineWbSunny className="text-2xl text-blue" />
+          <MdOutlineWbSunny className="text-xl text-blue" />
         )}
       </button>
     </div>

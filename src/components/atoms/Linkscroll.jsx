@@ -1,12 +1,25 @@
-const LinkScroll = (props) => {
-  const { title, styling, isActive } = props;
+const LinkScroll = ({
+  title,
+  label,
+  targetId,
+  styling = "",
+  isActive = false,
+  onClick,
+}) => {
+  const displayLabel = label || title;
+  const target = targetId || title?.toLowerCase() || "";
 
   return (
     <a
-      href={`#${title.toLowerCase()}`}
-      className={` ${styling} flex py-2 text-lg hover:font-bold hover:text-blue dark:hover:text-light500 hover:scale-95 transition-all ease-in-out duration-300 font-dmsans mx-8 md:mx-4 capitalize ${isActive ? "bg-blue/10 text-blue dark:bg-darkBlue/50 dark:text-white px-4 py-1 rounded-full font-extrabold" : "text-dark200"}`}
+      href={`#${target}`}
+      onClick={onClick}
+      className={`${styling} flex items-center py-2 px-3 text-sm lg:text-base font-medium transition-all duration-200 font-dmsans rounded-full capitalize ${
+        isActive
+          ? "bg-blue/10 text-blue dark:bg-darkBlue/40 dark:text-blue font-semibold"
+          : "text-greys hover:text-blue dark:text-dark600 dark:hover:text-primary100"
+      }`}
     >
-      {title}
+      {displayLabel}
     </a>
   );
 };
