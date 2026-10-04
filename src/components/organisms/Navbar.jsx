@@ -18,7 +18,6 @@ const Navbar = () => {
   );
   const { t } = useTranslation();
 
-  // Scroll detection for navbar styling
   useEffect(() => {
     const changeNavbarColor = () => {
       setColorChange(window.scrollY >= 40);
@@ -30,7 +29,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Active section observer
   useEffect(() => {
     const sections = linkNav
       .map((link) => document.getElementById(link.title.toLowerCase()))
@@ -61,7 +59,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Lock body scroll when mobile drawer is open
   useEffect(() => {
     if (isNavOpen) {
       document.body.style.overflow = "hidden";
@@ -73,7 +70,6 @@ const Navbar = () => {
     };
   }, [isNavOpen]);
 
-  // Mobile Drawer Portal
   const renderMobileDrawer = () => {
     if (typeof document === "undefined") return null;
 
@@ -81,7 +77,6 @@ const Navbar = () => {
       <AnimatePresence>
         {isNavOpen && (
           <div className="fixed inset-0 z-[9999] lg:hidden">
-            {/* Backdrop */}
             <motion.div
               key="backdrop"
               initial={{ opacity: 0 }}
@@ -92,7 +87,6 @@ const Navbar = () => {
               onClick={() => setIsNavOpen(false)}
             />
 
-            {/* Fullscreen Mobile Drawer */}
             <motion.aside
               key="drawer"
               initial={{ x: "100%" }}
@@ -101,7 +95,6 @@ const Navbar = () => {
               transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
               className="fixed inset-0 w-full h-full bg-white dark:bg-dark100 flex flex-col justify-between overflow-y-auto shadow-2xl"
             >
-              {/* Drawer Top Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-blueGrey-100 dark:border-dark300 bg-white/95 dark:bg-dark100/95 sticky top-0 z-10 backdrop-blur-md">
                 <a
                   href="#home"
@@ -131,7 +124,6 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Navigation Links (Centered, full touch targets) */}
               <nav className="flex flex-col flex-1 justify-center px-6 py-8 gap-2">
                 {linkNav.map((link, i) => {
                   const isActive = activeSection === link.title.toLowerCase();
@@ -168,7 +160,9 @@ const Navbar = () => {
                         </div>
                         <FaAngleRight
                           className={`text-sm transition-transform ${
-                            isActive ? "text-blue translate-x-1" : "text-blueGrey-300 dark:text-dark400"
+                            isActive
+                              ? "text-blue translate-x-1"
+                              : "text-blueGrey-300 dark:text-dark400"
                           }`}
                         />
                       </a>
@@ -177,7 +171,6 @@ const Navbar = () => {
                 })}
               </nav>
 
-              {/* Drawer Bottom Footer */}
               <div className="px-6 py-6 border-t border-blueGrey-100 dark:border-dark300 text-center bg-ygBlue/30 dark:bg-dark200/30">
                 <p className="text-xs text-blueGrey-400 dark:text-dark600 font-jetbrains tracking-wider">
                   © 2026 Syifa Sukma • Portfolio
@@ -198,7 +191,6 @@ const Navbar = () => {
           colorChange ? "lg:top-4" : "lg:top-0"
         }`}
       >
-        {/* Mobile Header Bar */}
         <div className="lg:hidden w-full px-4 sm:px-6 py-3 bg-white/95 dark:bg-dark100/95 backdrop-blur-md border-b border-blueGrey-100/80 dark:border-dark300/80 shadow-sm flex items-center justify-between transition-colors">
           <a href="#home" className="flex items-center gap-2">
             <img
@@ -221,12 +213,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Header Bar */}
         <div className="hidden lg:block w-full">
           <div
             className={`transition-all duration-300 ${
               colorChange
-                ? "max-w-fit mx-auto px-6 py-2 rounded-full bg-white/90 dark:bg-dark200/90 backdrop-blur-xl border border-blueGrey-200/80 dark:border-dark300 shadow-lg"
+                ? "max-w-fit mx-auto px-6 py-4 rounded-full bg-white/90 dark:bg-dark200/90 backdrop-blur-xl border border-blueGrey-200/80 dark:border-dark300 shadow-lg"
                 : "w-[85%] max-w-6xl mx-auto py-5 bg-transparent"
             }`}
           >
@@ -239,7 +230,6 @@ const Navbar = () => {
                 />
               </a>
 
-              {/* Desktop Nav Links */}
               <nav className="flex items-center gap-1">
                 {linkNav.map((link) => (
                   <LinkScroll
@@ -252,7 +242,6 @@ const Navbar = () => {
                 ))}
               </nav>
 
-              {/* Desktop Controls */}
               <div className="flex items-center gap-2.5">
                 <LanguageSwitch />
                 <ToggleSwitch />
@@ -262,7 +251,6 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Render Mobile Drawer outside navbar hierarchy */}
       {renderMobileDrawer()}
     </>
   );

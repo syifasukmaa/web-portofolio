@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Switch } from "@headlessui/react";
 import useDarkSide from "../../utils/useDarkSide";
 import { MdOutlineDarkMode, MdOutlineWbSunny } from "react-icons/md";
 
@@ -18,13 +17,13 @@ export default function ToggleSwitch() {
     <div className="flex items-center">
       <button
         aria-label="Toggle dark mode"
-        className={`flex items-center justify-center w-9 h-9 p-2 transition-all duration-300 rounded-full dark:bg-dark300 hover:scale-105 border border-blueGrey-200 dark:border-dark400 ${darkSide ? "dark:bg-gray-300/10" : "bg-primary100/30"}`}
+        className={`flex items-center justify-center w-9 h-9 p-2 transition-all duration-300 rounded-full dark:bg-dark300 hover:scale-105   ${darkSide ? "dark:bg-gray-300/10 bg-blue" : "bg-blue/20"}`}
         onClick={() => toggleDarkMode(!darkSide)}
       >
         {darkSide ? (
-          <MdOutlineDarkMode className="text-xl text-gray-300" />
+          <MdOutlineDarkMode className="text-2xl text-gray-300" />
         ) : (
-          <MdOutlineWbSunny className="text-xl text-blue" />
+          <MdOutlineWbSunny className="text-2xl text-blue" />
         )}
       </button>
     </div>

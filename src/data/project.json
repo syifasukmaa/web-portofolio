@@ -2,7 +2,10 @@
   {
     "id": 7,
     "name": "Artist Personal Website",
-    "desc": "Website personal tribute yang didedikasikan untuk Shani Indira, mantan anggota JKT48. Website ini menampilkan perjalanan karier, galeri foto, serta berbagai momen spesial sebagai bentuk apresiasi dan kenangan atas dedikasinya di dunia hiburan. Dibangun dengan Next JS, TailwindCSS, dan Swiper JS, website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi, sehingga pengunjung bisa merasakan pengalaman yang hangat dan personal.",
+    "desc": {
+      "en": "A personal tribute website dedicated to Shani Indira, a former member of JKT48. It showcases her career journey, photo gallery, and special moments as an appreciation for her dedication to the entertainment industry. Built with Next.js, TailwindCSS, and Swiper.js, delivering an interactive, responsive, and seamless visitor experience.",
+      "id": "Website personal tribute yang didedikasikan untuk Shani Indira, mantan anggota JKT48. Website ini menampilkan perjalanan karier, galeri foto, serta berbagai momen spesial sebagai bentuk apresiasi dan kenangan atas dedikasinya di dunia hiburan. Dibangun dengan Next JS, TailwindCSS, dan Swiper JS, website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi, sehingga pengunjung bisa merasakan pengalaman yang hangat dan personal."
+    },
     "gihtub": "https://github.com/syifasukmaa/website-shani-indira",
     "preview": "https://shani-indira.vercel.app/",
     "stack": ["Next JS", "TailwindCSS", "Zustand", "Swiper JS"],
@@ -18,7 +21,10 @@
   {
     "id": 1,
     "name": "Quran Web App",
-    "desc": "Website untuk membaca Al-Quran yang dilengkapi dengan fitur pencarian surah, terjemahan, dan tafsir. Serta terdapat jadwal sholat pada masing-masing kota. Dibangun dengan Vue.JS, Typescript dan TailwindCSS. website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi",
+    "desc": {
+      "en": "An Al-Quran web application equipped with surah search, translation, and tafsir features, along with prayer schedules for various cities. Built with Vue.js, TypeScript, and TailwindCSS, providing an interactive, responsive, and easy-to-navigate user experience.",
+      "id": "Website untuk membaca Al-Quran yang dilengkapi dengan fitur pencarian surah, terjemahan, dan tafsir. Serta terdapat jadwal sholat pada masing-masing kota. Dibangun dengan Vue.JS, Typescript dan TailwindCSS. website ini menyajikan tampilan interaktif, responsif, dan mudah dinavigasi"
+    },
     "gihtub": "https://github.com/syifasukmaa/quran-web",
     "preview": "https://quranandoa.netlify.app",
     "stack": ["Vue.JS", "Typescript", "TailwindCSS"],
@@ -34,7 +40,10 @@
   {
     "id": 5,
     "name": "Preducation",
-    "desc": "Preducation adalah platform kursus online yang menghadirkan berbagai materi tentang teknologi digital, seperti pengembangan Android, pemrograman, dan topik menarik lainnya. Website ini dirancang dengan Next JS dan TailwindCSS untuk memberikan performa cepat dan tampilan modern. Dengan integrasi SWR, data selalu diperbarui secara real-time sehingga pengguna mendapatkan pengalaman belajar yang interaktif. Preducation juga terhubung dengan aplikasi Android untuk memudahkan akses belajar di mana saja.",
+    "desc": {
+      "en": "Preducation is an online course platform offering comprehensive digital technology learning materials, including Android development, programming, and other engaging topics. Built with Next.js and TailwindCSS for high performance and modern aesthetics, with SWR integration for real-time updates and Android app connectivity for on-the-go learning.",
+      "id": "Preducation adalah platform kursus online yang menghadirkan berbagai materi tentang teknologi digital, seperti pengembangan Android, pemrograman, dan topik menarik lainnya. Website ini dirancang dengan Next JS dan TailwindCSS untuk memberikan performa cepat dan tampilan modern. Dengan integrasi SWR, data selalu diperbarui secara real-time sehingga pengguna mendapatkan pengalaman belajar yang interaktif. Preducation juga terhubung dengan aplikasi Android untuk memudahkan akses belajar di mana saja."
+    },
     "github": "https://github.com/syifasukmaa/preducation-frontend.git",
     "preview": "https://preducation.vercel.app/",
     "stack": ["Next JS", "TailwindCSS", "SWR"],
@@ -50,7 +59,10 @@
   {
     "id": 4,
     "name": "Personal Notes",
-    "desc": "Personal Notes adalah aplikasi catatan digital sederhana yang membantu pengguna mencatat berbagai kegiatan atau ide penting secara cepat. Aplikasi ini menyimpan catatan di local storage sehingga data tetap tersimpan walaupun halaman ditutup. Dibangun menggunakan React JS dan TailwindCSS, aplikasi ini memiliki antarmuka bersih, responsif, dan mudah digunakan, sehingga cocok untuk pelajar, pekerja, atau siapa pun yang ingin lebih teratur dalam aktivitas sehari-hari.",
+    "desc": {
+      "en": "Personal Notes is a clean digital note-taking app that helps users quickly organize daily activities and ideas. It persists notes in local storage so data remains safe across browser sessions. Developed with React.js and TailwindCSS, featuring an intuitive, responsive interface ideal for students, professionals, and anyone aiming for better productivity.",
+      "id": "Personal Notes adalah aplikasi catatan digital sederhana yang membantu pengguna mencatat berbagai kegiatan atau ide penting secara cepat. Aplikasi ini menyimpan catatan di local storage sehingga data tetap tersimpan walaupun halaman ditutup. Dibangun menggunakan React JS dan TailwindCSS, aplikasi ini memiliki antarmuka bersih, responsif, dan mudah digunakan, sehingga cocok untuk pelajar, pekerja, atau siapa pun yang ingin lebih teratur dalam aktivitas sehari-hari."
+    },
     "github": "https://github.com/syifasukmaa/personal-note",
     "preview": "https://notes-shanday.netlify.app/",
     "stack": ["React JS", "TailwindCSS"],

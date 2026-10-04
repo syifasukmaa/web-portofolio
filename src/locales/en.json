@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Home",
+    "project": "Projects",
+    "resume": "Resume",
+    "certificate": "Certificates",
+    "article": "Articles",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "name": "Syifa Sukma",
+    "rolePrefix": "I am a",
+    "roles": [" Front End Web Developer", " Customer Service", " UI/UX Enthusiast"],
+    "description": "Fresh Graduate majoring in Information Systems. I have a great interest in the IT industry, especially in web development and data management.",
+    "downloadCv": "Download CV",
+    "github": "Github"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "My work so far",
+    "showMore": "Show More Projects",
+    "showLess": "Show Less",
+    "livePreview": "Live Preview",
+    "details": "Details",
+    "viewCode": "View Code",
+    "status": "Status",
+    "year": "Year",
+    "type": "Type",
+    "completed": "Completed",
+    "inProgress": "In Progress"
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "Years of Experience"
+  },
+  "certificate": {
+    "title": "Certificates",
+    "subtitle": "Recognitions & Accreditations"
+  },
+  "article": {
+    "title": "Articles",
+    "subtitle": "Writing & Thoughts"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "I'm open to full-time roles, freelance work, and interesting collaborations. If you're looking to hire or collaborate - let's talk!",
+    "greeting": "Let's connect and work together",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!"
+  },
+  "detail": {
+    "back": "Home",
+    "breadcrumb": "Detail Project",
+    "status": "Status",
+    "year": "Year",
+    "type": "Type",
+    "techStack": "Tech Stack",
+    "highlights": "Key Highlights",
+    "responsive": "Fully Responsive Design",
+    "darkLight": "Dark & Light Mode Support",
+    "performance": "Optimized Performance & UX",
+    "liveDemo": "Live Demo",
+    "viewCode": "View Code"
+  },
+  "common": {
+    "portfolio": "Portfolio",
+    "close": "Close",
+    "menu": "Menu"
+  }
+}

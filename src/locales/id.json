@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "project": "Proyek",
+    "resume": "Resume",
+    "certificate": "Sertifikat",
+    "article": "Artikel",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, nama saya",
+    "name": "Syifa Sukma",
+    "rolePrefix": "Saya seorang",
+    "roles": [" Front End Web Developer", " Customer Service", " Antusias UI/UX"],
+    "description": "Lulusan baru jurusan Sistem Informasi. Memiliki minat besar dalam industri IT, terutama di bidang pengembangan web dan manajemen data.",
+    "downloadCv": "Unduh CV",
+    "github": "Github"
+  },
+  "projects": {
+    "title": "Proyek",
+    "subtitle": "Karya yang telah saya buat",
+    "showMore": "Lihat Proyek Lainnya",
+    "showLess": "Tampilkan Lebih Sedikit",
+    "livePreview": "Live Preview",
+    "details": "Detail",
+    "viewCode": "Lihat Kode",
+    "status": "Status",
+    "year": "Tahun",
+    "type": "Tipe",
+    "completed": "Selesai",
+    "inProgress": "Sedang Dikerjakan"
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "Pengalaman Kerja"
+  },
+  "certificate": {
+    "title": "Sertifikat",
+    "subtitle": "Pengakuan & Akreditasi"
+  },
+  "article": {
+    "title": "Artikel",
+    "subtitle": "Tulisan & Pemikiran"
+  },
+  "contact": {
+    "title": "Kontak",
+    "subtitle": "Terbuka untuk peluang kerja full-time, freelance, dan kolaborasi menarik. Jika Anda ingin merekrut atau berkolaborasi - mari berbincang!",
+    "greeting": "Mari terhubung dan bekerja sama",
+    "namePlaceholder": "Nama Anda",
+    "emailPlaceholder": "Email Anda",
+    "messagePlaceholder": "Pesan Anda",
+    "sendButton": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "success": "Pesan berhasil dikirim!"
+  },
+  "detail": {
+    "back": "Beranda",
+    "breadcrumb": "Detail Proyek",
+    "status": "Status",
+    "year": "Tahun",
+    "type": "Tipe",
+    "techStack": "Teknologi",
+    "highlights": "Keunggulan Utama",
+    "responsive": "Desain Responsif Penuh",
+    "darkLight": "Mendukung Mode Gelap & Terang",
+    "performance": "Performa & UX Optimal",
+    "liveDemo": "Demo Langsung",
+    "viewCode": "Lihat Kode"
+  },
+  "common": {
+    "portfolio": "Portofolio",
+    "close": "Tutup",
+    "menu": "Menu"
+  }
+}

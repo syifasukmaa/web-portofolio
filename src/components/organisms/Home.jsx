@@ -2,7 +2,6 @@ import Button from "../atoms/Button";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
-import { BsGithub } from "react-icons/bs";
 import { FaGitAlt, FaReact } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import FloatingBadge from "../atoms/FloatingBadge";
@@ -111,16 +110,6 @@ function Home() {
                   <path d="M6 18h.01"></path>
                   <path d="M10 18h.01"></path>
                 </svg>
-              </Button>
-
-              <Button
-                styling={`${buttonStyle} border border-gray-300 bg-white text-gray-700 hover:bg-gray-900 hover:text-white dark:border-dark600 dark:bg-dark300 dark:text-dark700 dark:hover:bg-dark600`}
-                click={() =>
-                  window.open("https://github.com/syifasukmaa", "_blank")
-                }
-              >
-                <BsGithub className="text-xl" />
-                <p>Github</p>
               </Button>
             </div>
           </motion.div>

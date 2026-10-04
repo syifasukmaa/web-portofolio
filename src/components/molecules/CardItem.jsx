@@ -4,10 +4,15 @@ import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 import { useTranslation } from "../../context/LanguageContext";
 
 const CardItem = ({ project, index }) => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const isDone = project.process === "Done";
   const githubUrl = project.github || project.gihtub;
   const isReverse = index % 2 === 1;
+
+  const description =
+    typeof project.desc === "object"
+      ? project.desc[lang] || project.desc.en || ""
+      : project.desc;
 
   return (
     <motion.div
@@ -45,7 +50,7 @@ const CardItem = ({ project, index }) => {
         </h4>
 
         <p className="mt-3 text-sm md:text-base font-light text-greys dark:text-dark600 leading-relaxed line-clamp-3">
-          {project.desc}
+          {description}
         </p>
 
         <div className="flex flex-wrap gap-2 my-4">
